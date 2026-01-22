@@ -1,0 +1,36 @@
+// 1
+JPEG / JPG
+    Significado: Joint Photographic Experts Group
+    Programas: Photoshop, GIMP, navegadores web
+    Tipo: Mapa de bits
+
+PNG
+    Significado: Portable Network Graphics
+    Programas: Photoshop, GIMP, navegadores web
+    Tipo: Mapa de bits
+
+GIF
+    Significado: Graphics Interchange Format
+    Programas: GIMP, navegadores web
+    Tipo: Mapa de bits
+
+SVG
+    Significado: Scalable Vector Graphics
+    Programas: Illustrator, Inkscape, navegadores web
+    Tipo: Vectorial
+
+TIFF / TIF
+    Significado: Tagged Image File Format
+    Programas: Photoshop, programas de impresión
+    Tipo: Mapa de bits
+
+// 2
+
+Los formatos más usados en la web son JPEG, PNG, GIF y SVG.
+JPEG se usa para fotos porque pesa poco, aunque pierde calidad.
+PNG mantiene la calidad y permite transparencias, ideal para logos.
+GIF sirve para animaciones simples gracias a sus 256 colores.
+SVG es vectorial, se puede escalar sin perder calidad y es perfecto para iconos.
+
+// 3
+

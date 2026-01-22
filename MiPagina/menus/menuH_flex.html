@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menuHorizontal Flex</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    ul {
+      list-style: none;
+      background-color: bisque;
+      display: flex;                
+      justify-content: center;     
+      align-items: center;        
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      border-radius: 100px;
+      gap: 10px;                    
+    }
+
+    li {
+      border-radius: 100px;
+    }
+
+    li > a {
+      color: initial;
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 20px;
+      box-shadow: none;
+      transform: scale(1);
+    }
+
+    li > a.activo {
+      background-color: blue;
+      color: white;
+    }
+
+    li > a:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+    }
+
+    .footer_content{
+        background-color: bisque;
+        
+    }
+     footer {
+      background-color: bisque;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      padding: 15px;
+      border: 1px solid black;
+      margin-top: 30px;
+
+    }
+
+    footer h3 {
+      margin-bottom: 5px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: black;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer span {
+      display: block;
+    }
+    
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="/novedades.html" class="activo">Novedades</a></li>
+    <li><a href="/market.html">Mercado</a></li>
+    <li><a href="/foros.html">Foros</a></li>
+  </ul>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum fugit reprehenderit ratione? Voluptas nemo maxime velit laborum eos autem debitis odit culpa, vel sit nam, totam voluptates consectetur pariatur? Quam Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in, temporibus possimus dolorem optio fugit dignissimos explicabo quasi ex doloribus vero laboriosam quo distinctio rerum modi ipsam illo tempora ipsum!
+    Minima omnis aliquam voluptatem velit quibusdam molestias laudantium libero! Exercitationem facilis temporibus cum at reprehenderit minima eligendi, nisi in laborum ratione. Asperiores omnis magni autem? Sit magnam exercitationem nobis veritatis!
+    Culpa animi laboriosam soluta itaque illo vero iusto dolor sequi mollitia possimus amet nesciunt, libero harum exercitationem minima, cum minus eligendi! Omnis officiis suscipit placeat blanditiis? Earum maxime minima porro.
+    Laboriosam facilis enim corrupti, culpa error provident ipsum obcaecati architecto, autem quam atque soluta voluptate eveniet iure. Deleniti nesciunt totam culpa voluptate recusandae dolore expedita quae, corrupti assumenda repudiandae ut!
+    Perferendis, reiciendis. Totam nisi blanditiis, commodi delectus corrupti error consequatur distinctio ducimus pariatur repudiandae dolorum rerum neque hic dignissimos voluptatibus eligendi temporibus beatae omnis voluptatem magnam eos voluptates. Inventore, labore.
+    Fugiat officiis rem odio quo tempore nesciunt quod itaque nam praesentium, mollitia temporibus hic a voluptatibus doloribus nulla perspiciatis aspernatur ab quisquam eaque obcaecati. Numquam voluptas possimus maxime nostrum qui.
+    Quam excepturi aut expedita quaerat tenetur voluptatum minima, deserunt ipsum provident, recusandae in debitis saepe? Officiis minima doloribus aspernatur dicta excepturi numquam. Explicabo molestiae labore illum consequatur deserunt! Quis, voluptatum.
+    Amet ex blanditiis nostrum illum harum, voluptatibus ipsam nulla voluptatum. Quos consequuntur aperiam itaque error ipsa blanditiis doloribus quas dolor minus totam nisi eligendi explicabo eum deserunt, hic temporibus excepturi!
+    Consequuntur sed unde excepturi, officiis accusamus dolores nesciunt nostrum quia quidem, voluptatum necessitatibus obcaecati eveniet tempore dolore nemo quam? Ipsam eum dolores ex, recusandae aliquid quasi nemo. Laboriosam, quidem nesciunt!
+    Porro ipsam tempore ipsa odio, vero debitis est autem laborum soluta, numquam sunt magnam aliquid cumque beatae expedita accusamus, eveniet mollitia. Officia doloribus nostrum beatae maiores, possimus error consequuntur quae! Dolorem soluta laboriosam dolores explicabo culpa illo ea! Porro itaque voluptatem...
+  </p>
+
+  <footer>
+    <div class="footer_content">
+        <div class="contactar">
+            <h3>Contáctenos</h3>
+            <a href="#"><span class="mensaje">Contáctenos</span></a>
+            <a href="#"><span class="correo">adriangomezferreiro@gmail.com</span></a>
+            <a href="#"><span class="telefono">+34 633 94 90 90</span></a>
+        </div>
+        <div class="redes">
+            <div><a href="#" class="facebook"></a></div>
+            <div><a href="#" class="twitter"></a></div>
+            <div><a href="#" class="instagram"></a></div>
+        </div>
+
+        <div class="footer-copy">
+            <p>Copyright © Nombre de la empresa</p>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

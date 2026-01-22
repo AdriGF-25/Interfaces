@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  font-family: sans-serif;
+}
+
+.carousel {
+  --index: 0;              
+  width: 400px;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.8);
+  color: #000;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-left  { 
+  left: 8px;
+}
+.arrow-right {
+  right: 8px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="carousel">
+
+    <div class="slides">
+      <div class="slide">
+        <img src="./img 1.jpg" alt="Foto 1">
+      </div>
+      <div class="slide">
+        <img src="./img 2.jpg" alt="Foto 2">
+      </div>
+      <div class="slide">
+        <img src="./img 3.jpg" alt="Foto 3">
+      </div>
+    </div>
+ 
+    <label for="s2" class="arrow arrow-right to-s2"></label>
+
+    <label for="s1" class="arrow arrow-left to-s1"></label>
+
+    <label for="s3" class="arrow arrow-right to-s3"></label>
+
+    <label for="s2" class="arrow arrow-left to-s2"></label>
+  </div>
+</body>
+</html>

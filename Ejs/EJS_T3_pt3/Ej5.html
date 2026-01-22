@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej5</title>
+    <style>
+        h2::first-letter{
+            font-size: xx-large;
+            font-family: fantasy;
+            color: violet;
+            font-weight: bold;
+        }
+        p::first-line{
+            font-style: italic;
+            font-size: small;
+            text-decoration: underline solid black;
+        }
+        p::before{
+            content: "*.";
+            color:lightblue;
+        }
+        p::after{
+            content: " - Aloja more don";
+            color: red;
+        }
+        p::selection{
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Titulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum fugit in eligendi earum rerum, fugiat ab consectetur facere accusantium quae totam recusandae velit deserunt? Delectus praesentium eveniet obcaecati inventore.</p>
+
+    <h2>Titulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum fugit in eligendi earum rerum, fugiat ab consectetur facere accusantium quae totam recusandae velit deserunt? Delectus praesentium eveniet obcaecati inventore.</p>
+    
+</body>
+</html>

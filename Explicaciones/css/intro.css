@@ -1,0 +1,53 @@
+/*Estilos css del documento externo
+
+    selector {
+        propiedad1:valor1;
+        propiedad2:valor2;
+        etc...
+    }
+
+    SELECTOR:   
+        * universal: selecciona todo elemento del html
+        eliminar espacios que tienen por defecto los elementos html padding,margin
+
+        etiqueta: seleciona un elemento h1, p b ,...
+        de clases: se acceden  cpon un .nombreclase
+        los id se acceden con un # 
+        
+        descendente directo(hijo directo) -
+
+
+        */
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    color: green;
+}
+h2{
+    color: red;
+    background-color: black;
+    text-align: center;
+}
+
+.padre > .parrafo1{ 
+    color: yellow;
+}
+
+.padre > p{ 
+    color: violet;
+}
+
+/* PORPIEDADES DE LA FUENTE 
+    MEDIDAS ABSOLUTAS:
+        px (medida screen),cm , mm,pt, in (media print)
+    MEDIDAS RELATIVAS:
+        rem (px*1.5)
+        por defecto html son 16px
+        em: depende del elemento padre
+        vw viewport width 1% del anchoo del dispositivo
+        vw viewport height
+        % depende del elemento padre
+*/

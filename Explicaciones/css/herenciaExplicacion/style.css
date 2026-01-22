@@ -1,0 +1,46 @@
+/*PROPIEDADES HEREDABLES
+    Propiedades de fuente y texto: color , font-size, font-weight, font-family,text-decaration,etc...
+
+
+PROPIEDADES NO HEREDABLES
+    botdes : border,border-color,border -style
+    anchos y altos: with y height
+    margin y padding
+    display y los posicionaminetos
+    background
+
+*/
+/*Los enlaces se comportan un poco distinto porque tienen propieadaes especificas 
+    color no llo aceptan*/
+
+/*Initial: poner los estilos a su valor original
+ Inherit:fuerza la herencia*/
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.padre{
+    color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px black;
+    border: 2px solid blue;
+    background-color: khaki;
+}
+
+.padre>p{
+    color: initial;
+    text-shadow:initial;
+}
+
+.padre>a{
+    color:inherit;
+
+}
+
+.hijo>p {
+    border: inherit;
+}
+.hijo>p{
+    border:inherit;
+}

@@ -1,0 +1,35 @@
+body{
+        width:90%; /*debería ser directamente 100% */
+        margin:center; /* esto deberia ser margin: 0*/
+        text-family:'Courier New', Courier, monospace; /* es font-family , no text-family*/
+    }
+    h1{
+        align-center: center; /*sería text-align:center;*/
+        size:30pt; /*esto font-size */
+        text-decoration: none; /*debería tener underline dotted */
+    }
+    #datos{ /*esto debería ser llamado con . y no con # , ya que es una clase , no un id*/
+        width: 20%;
+        text-align: right;
+        border: 1px solid black;
+        border-radius-top: 4px; /*sería border-top y de ahí ponerle el radius*/
+        padding: 5px;
+    }
+    .principal{ /*este debería ser llamado con # en vez de . */
+        width: 60%;
+        margin-left:5%;
+        text-align: justify;
+    }
+    .datos, .principal{
+        clear:left;
+    }
+    ul{
+        style-list: none; /*sería list-style*/
+        padding: 0;
+    }
+    .contenido li{
+        float:left;
+        width: 30%;
+        text-align: justify;
+        padding: 10px;
+    }

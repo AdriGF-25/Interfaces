@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: gray;
+    text-decoration: underline dotted gray;
+    text-shadow: 2px gainsboro;
+    text-transform: uppercase;
+}
+h2{
+    text-transform: capitalize;
+}
+
+li{
+    font-weight: bold;
+    font-style: normal;
+    text-decoration:normal;
+}
+span{
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline solid black;
+}

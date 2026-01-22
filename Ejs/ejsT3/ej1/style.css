@@ -1,0 +1,28 @@
+.p1{
+    color: #2d6921;
+    border: 3px dotted;
+    border-color: #d66f0f;
+    border-width: 500 px;
+    font-weight: bold;
+    padding: 20px 20px 20px 20px;
+    text-align: right;
+    margin-bottom: 100px;
+}
+.p2{
+    border: 3px solid blue;
+    width: 500 px;
+    margin: auto;
+    padding: 50px 50px 50px 50px;
+    font-style: italic;
+}
+.p3{
+    width: 30%;
+    border: 6px outset #666;
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    line-height: 30px;
+}
+.p4{
+    width: 75%;
+    border-top: 3px solid #f0377b;
+}

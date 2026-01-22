@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gainsboro;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+.galeria{
+    display: grid;
+    /* flex-direction:row */
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat (4,1fr);
+    gap: 20px;
+}
+.foto{
+    flex-shrink:0;
+    flex-grow:0;
+    flex-basis:calc(25%-20px); /*calc*/
+}
+img{
+    width: 100%;
+    display: block;
+}
+/* consulta de medios */
+/* screen, prin, all */
+
+@media screen and (min-width:768px) and (max-width:1200px){
+    .galeria{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:768px){
+    .galeria{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:480px){
+    .galeria{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

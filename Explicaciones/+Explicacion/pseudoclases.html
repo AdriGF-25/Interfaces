@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <style>
+        a:link{
+            color: black;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        a:hover{
+            color: yellow;
+            text-decoration: 3px dotted gold;
+            font-size: 25px;
+        }
+        a:visited{
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 10px;
+        }
+        a:active{
+            color: brown;
+            font-weight: bold;
+        }
+        h1:hover{
+            color: grey;
+            text-decoration: underline dotted;
+        }
+        input#fnombre:focus{
+            outline: none;
+            background-color: red;
+            border: 2px solid;
+           
+        }
+        input#fnombre + input{
+            accent-color: red; /*cambiar el colo de fondo del  ratio*/
+        }
+    </style>
+</head>
+<body>
+    <!--PSEUDOCLASES: para dar estilos a los distintos estados de un elemento html
+        sintaxis:
+            elemento:nombrepseudoclase{
+            estilo css
+            }
+        
+        los enlaces: estado normal link, estado visitado (visited) estado activo (active), pasar el ratón (hover)
+            a:link{
+            
+            }
+            a:hover{
+            
+            }
+            a:visited{
+            
+            }
+            a:active{
+            
+            }
+        PSEUDOCLASES CON LISTAS
+            first-child
+            first-of-type
+            last-child
+            last-element-child
+            only-child
+            nth.child()    -->
+
+
+    <a href="https://www.google.com">enlace</a>
+    <h1>H1</h1>
+    <ul>
+        <p>hola</p>
+        <li>i1</li>
+        <li>i2</li>
+        <li>i3</li>
+    </ul>
+    <form action="pagina.php" method="get">
+        <label for="fnombre"></label>
+        <input type="text" size="30" id="fnombre" name="fnombre" maxlength="20" placeholder="Tu nombre">
+        <input type="checkbox" size="30" id="fcheck" name="fcheck" maxlength="20" placeholder="Tu nombre">
+    </form>
+</body>
+</html>

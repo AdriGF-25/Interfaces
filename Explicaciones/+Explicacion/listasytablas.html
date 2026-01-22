@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listas</title>
+    <style>
+        /*Propiedades de las listas*/
+        ul{ 
+            /*cambia la viñeta*/
+            list-style-type: square;
+            /*list-style-type: none;    para sacar viñeta*/
+            list-style-position: inside;
+            /**/
+            list-style-image: url('user.svg');
+            /*propiedad abreviada list-style*/
+            list-style: square inside url('user.svg');
+        }
+        ol{
+            
+            list-style-type: lower-roman;
+        }
+        ul.ol,li{
+            border: 1px solid black;
+        }
+        table{
+            width: 60%;
+            margin: auto;
+            box-shadow: 2px 2px 2px gray;
+        }
+        table,td,th{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        tr:first-child{
+            height: 50px;
+        }
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    <ol>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ol>
+    <table>
+        <tr>
+            <th>titulo</th>
+            <th>titulo</th>
+            <th>titulo</th>
+        </tr>
+        <tr>
+            <td>datos</td>
+            <td>datos</td>
+            <td>datos</td>
+        </tr>
+        <tr>
+            <td>datos</td>
+            <td>datos</td>
+            <td>datos</td>
+        </tr>
+        <tr>
+            <td>datos</td>
+            <td>datos</td>
+            <td>datos</td>
+        </tr>
+    </table>
+</body>
+</html>

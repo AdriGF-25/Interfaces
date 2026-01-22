@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: ;
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+a{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right:20px; 
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+.separado{
+    float: left;
+    margin-left:20px;
+    gap: 10px;
+}
+
+a:hover{
+    color: gold;
+    text-shadow: 5px 5px black;
+    transition: 0.5s ease-in;
+}
+
+.titulo{
+    display: flex;
+    gap: 1rem;
+    z-index: 1;
+    transform: translateY(-50%);
+    position: relative;
+    top: -300px;
+    left: 50%;
+    color: white;
+}
+.tit1{
+    font-weight: bold;
+    background-color: black ;
+    padding: 10px 10px;
+}
+.tit2{
+    
+}
+
+header >div img{
+    border-bottom: 2px solid black;
+}
+
+.proyectos > p{
+    margin: 10px;
+    letter-spacing: 2px;
+    font-size: larger;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat (4,1fr);
+    margin: 40px;
+    gap: 2rem;
+}
+
+.texto{
+    position: absolute;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 10px;
+
+}
+
+.sobre p:first-child{
+    margin: 10px;
+    letter-spacing: 2px;
+    font-size: larger;
+}
+
+.sobre p:not(p:first-child){
+    margin: 20px;
+}
+.galeria-sobre{
+    display: grid;
+    grid-template-columns: repeat (4,1fr);
+    margin: 40px;
+    gap: 2rem;
+}
+.contactar{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border:1px solid gold;
+    position: relative;
+    z-index: 1;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    color: black;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+.contactar::before,
+.contactar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    /* skew lo que hace es basicamente hacer que la divison se crea entre las dos pestañas vamos a llamarlas sea oblicua en vez de vertical , no tiene mas función que esa */
+    transition: all 0.5s;
+    z-index: -1;
+}
+.contactar::before {
+    left: -10px;
+    background: #363536;
+}
+
+.contactar::after {
+    right: -10px;
+    background: rgb(128, 126, 126);
+}
+.contactar:hover::before,
+.contactar:hover::after {
+    width: 58%;
+}
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1200px){
+    .galeria,.galeria-sobre{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:768px){
+    .galeria, .galeria-sobre{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:480px){
+    .galeria, .galeria-sobre{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -1,0 +1,72 @@
+/*Reset básico*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: rgb(234, 229, 229);
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px; /*para que se adapte al 100x100*/
+    margin: 20px auto 0px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgb(206, 200, 200);
+    width: 260px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 275px;
+}
+p{
+    font-weight: bold ;
+}
+.price{
+    font-style: italic;
+    color: rgb(34, 199, 122);
+}
+.card:hover{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card> img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap:20px;
+}
+.pagination a {
+    text-decoration:  none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.pagination > a:hover{
+    background-color:grey;
+    color: white;
+}
+.pagination > .activo{
+    background-color: grey ;
+    color: white;
+}
+

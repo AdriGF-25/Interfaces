@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        ul{
+            list-style-type: none;
+            width: 200px;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            border:1px solid black;
+        }
+        li{
+            border-bottom: 1px solid black;
+        }
+        li:last-child{
+            border-bottom: none;
+        }
+        li>a{
+            text-decoration: none;
+            color: initial;
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        li>a.activo{
+            background-color: blue;
+            color: white;
+        }
+        li>a:hover:not(.logo){
+            padding: 10px 10px 10px 10px;
+        }
+        li>.logo{
+            height: 60px;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/novedades.html" class="activo">Novedades</a></li>
+        <li><a href="/market.html">Mercado</a></li>
+        <li><a href="/foros.html">Foros</a></li>
+    </ul>
+</body>
+</html>

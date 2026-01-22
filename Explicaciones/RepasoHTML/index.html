@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso HTML</title>
+
+<!--<link rel="stylesheet" hreft="estilo.css"></link> -->
+<!--link a favicon-->
+<!--link a google fonts-->
+<style>
+    .titulo{
+        background-color: antiquewhite;
+        font-weight: bold;
+        text-align: center;
+    }
+    table,th{
+        /*border: 2px dashed black*/
+        border-collapse: collapse;
+        border-width: 2px;
+        border-style: dashed;
+        border-color: black;
+    }
+    span{
+        color: purple;
+    }
+    h1.verde{
+        color: green;
+    }
+    .centrado{
+        text-align: center;
+    }
+    div#header{
+        background-color: black;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <p class="titulo">Etiquetas de texto, parrafors y encabezados</p>
+    <h1>Encabezado 1</h1>
+    <h2>encabezado 2</h2>
+    <h3>encabezado3</h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, consequatur incidunt deserunt aut quae possimus sequi atque dicta qui praesentium accusamus a labore et eligendi odit debitis reiciendis iste expedita!</p>
+
+    <!--ELEMENTOS EN BLOQUE: empiezan en una nueva linea y c¡ocupan el ancho de la pantalla ejemplos: p,encabezados,div,ul,ol,dl,dd,dt...
+    ELEMENTOS EN LÍNEA: no empiezan / avaban en una nueva línea y no ocupan el 100% ocupan su propio contenido ejemplo :enlaces,imagenes-->
+
+    <p class="titulo">ETIQUETAS DE FORMATO</p>
+    <!--small sup sub del ins-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nihil nesciunt et beatae exercitationem <i>ns</i> nostrum. Iusto <strong>ratione</strong> <mark>voluptate</mark> repellendus, provident asperiores, corrupti quasi numquam in earum omnis aliquid <b>aut.</b></p>
+
+    <!--pagina externa,ruta absoluta-->
+    <a href="https://www.google.com" title="google" target="_blank">Google</a>
+    <a href="https://www.google.com">Google</a>
+<!--pagina de mi sitio web, ruta relativa-->
+<a href="otraPagina.html">ir a otra pagina</a>
+
+<!--enlace a correo electronico-->
+<a href="mail@loquesea.com">Mail a alguien</a>
+<!--enlace con una imagen -->
+<a href="https://google.com">
+    <img src="img/descarga.jpeg" alt="imagen" title="hello" width="200" height="150
+    ">
+</a>
+    <!--marcadores a la propia pagina-->
+    <a href="#cap2">cap2</a>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aliquam sed autem atque, temporibus accusamus error animi voluptates perspiciatis voluptatum? Voluptates hic consectetur id doloribus! Molestiae in tenetur culpa explicabo<h2 id="cap2">.</h2></p>
+
+    <p class="titulo">LISTAS</p>
+    <ul type="i">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ol type ="1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <dl>
+        <dt>termino</dt>
+        <dd>descripción</dd>
+    </dl>
+    <p class="titulo">TABLAS</p>
+    <table>
+        <tr>
+            <th>tt1</th>
+            <th>tt2</th>
+            <th>tt3</th>
+        </tr>
+        <tr>
+            <td>t1</td>
+            <td>t2</td>
+            <td>t3</td>
+        </tr>
+    </table>
+    
+    <p class="titulo">CONTENEDORES EN BLOQUES Y EN LÍNEA div, span</p>
+    <div>
+        <h1>Título</h1>
+        <h2>Subtítulo</h2>
+        <p>Lorem ipsum, <span>dolor sit amet</span> consectetur adipisicing elit. Reprehenderit est rerum officia suscipit? Unde perferendis architecto, quod, deleniti autem natus, explicabo cum tempora consectetur alias atque aspernatur quis libero fugit!</p>
+
+    </div>
+    <p class="titulo">CLASES E IDENTIFICADORES</p>
+    <!--Clase:  las clases no pueden empezar por un numero, identifica a cualquier elemento html
+                Un elemento un p, h1 puede compartir la misma clase 
+                Un elemento puede tener varias clases
+                Se crea en la etiqueta de apertura de elemento-->
+
+    <h1 class="verde centrado">Encabezado verde</h1>
+    <p class="verde">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eligendi distinctio aspernatur! Libero inventore, nobis nemo harum odit blanditiis laborum placeat aspernatur veniam, modi qui molestiae quam reprehenderit totam accusantium.</p>
+
+    <!--Identificadores (Id):
+        Un id es único solo puede estar en un elemento html
+        Para estructurar nuestra página (header, div con id llamado header)
+        En JS vale para acceder a cada elemento del DOM
+        Se accede con #-->
+
+    <div id="header">Este es un header</div>
+
+    <titulo class="p">IFRAME</titulo>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.889640123866!2d-8.411237400000008!3d43.35841900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2e7c8e45b30aa9%3A0x24a7f66a3f64f90b!2sC.%20Ribadavia%2C%20A%20Coru%C3%B1a%2C%20La%20Coru%C3%B1a!5e0!3m2!1ses!2ses!4v1759489532306!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe width="500" height="500" src="https://www.youtube.com/watch?v=u7kdVe8q5zs&pp=ygUUdmlkZW9zIHNpbiBjb3B5cmlnaHQ%3D" frameborder="0"></iframe>
+
+    <!--favicon-->
+
+    <p class="titulo">ETIQUETAS SEMÁNTICAS / DE DISEÑO</titulo>
+    <header>cabecera de la pagina</header>
+    <main>cuerpo de la pagina
+        <section></section>
+        <article></article>
+        <aside></aside>
+    </main>
+    <footer>esto es un footer</footer>
+
+    <div id="header"></div>
+    <div class="footer"></div>
+    <div class="header" id="cabecera"></div>
+
+
+    <p class="titulo">FORMULARIOS</p>
+    <form action="pagina.php" method="get" autocomplete="on" target="_blank">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Escriba su nombre" size="40" maxlength="20" autofocus>
+        <label for="fpass">Password</label>
+        <input type="password" id="fpass" name="fpass" pattern="[A-Za-z]{8}">
+        <label for="fedad">Edad</label>
+        <input type="number" id="fedad" name="fedad" value="10" min="0" max="100" stop="2">
+        <label for="frango">Rango</label>
+        <input type="range" id="idrango" name="frango" value="5" min="0" max="100" step="10">
+        <input type="submit" value="Enviar">
+        <input type="button" id="fbutton" name="fbutton" value=" BOTOOOON">
+        <input type="reset" value="Borrar">
+        <input type="date" id="fcalendario" name="fcalendario" name="fcalendario">
+        <label for="fcolor">Color</label>
+        <input type="radio" id="fcverde" name="fcverde" value="verde" checked>
+        <input type="radio" id="fcrojo" name="fcrojo" value="rojo">
+
+        <!-- falta por completar -->
+        
+        <label for="fselector">Selector de color
+        </label>
+        <select name="fselector" id="fselector"  requiered>
+            <option value="verde" selected > Verde</option>
+            <option value="rojo" > Rojo</option>
+            <option value="azul" > Azul</option>
+        </select>
+        
+        <label for="fcomentario">Comentario:</label>
+            <textarea name="fcomentario" id="fcomentario" rows="10" cols="10" placeholder="Escribe comentario"></textarea>
+
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <input type="text" placeholder="nombre">
+            </fieldset>
+    </form>
+</body>
+</html>
+

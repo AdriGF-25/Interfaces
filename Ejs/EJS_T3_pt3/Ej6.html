@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudoclases y Pseudoelementos</title>
+  <style>
+    /* PSEUDOCLASES */
+
+    /* :focus-within → Cuando un elemento hijo (por ejemplo un input) tiene el foco */
+    .formulario {
+      border: 2px solid gray;
+      padding: 10px;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+    .formulario:focus-within {
+      border-color: blue;
+      background-color: #eef;
+    }
+
+    /*:not() → Aplica estilo a los párrafos que NO tienen la clase .importante */
+    p:not(.importante) {
+      color: gray;
+    }
+    p.importante {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* PSEUDOELEMENTOS */
+
+    /* ::selection → Estilo del texto seleccionado */
+    p::selection {
+      background-color: yellow;
+      color: black;
+    }
+
+    /* ::placeholder → Estilo del texto dentro de inputs vacíos */
+    input::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo de pseudoclases y pseudoelementos</h2>
+
+  <h3>:focus-within</h3>
+  <div class="formulario">
+    <label>Nombre:</label><br>
+    <input type="text" placeholder="Escribe tu nombre">
+  </div>
+
+  <h3>:not()</h3>
+  <p>Este párrafo no tiene la clase “importante”.</p>
+  <p class="importante">Este párrafo SÍ tiene la clase “importante”.</p>
+  <p>Otro párrafo sin clase importante.</p>
+
+  <h3>::selection</h3>
+  <p>Selecciona este texto con el ratón para ver el efecto de <code>::selection</code>.</p>
+
+  <h3>::placeholder</h3>
+  <input type="text" placeholder="Texto del placeholder">
+
+</body>
+</html>
