@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    color: white;
+    background-color: rgb(39, 38, 38);
+}
+
+.escena {
+    position: relative;
+    display: inline-block;
+    border: 4px solid #333; 
+    box-shadow: 0 0 20px black;
+    margin-top: 30px;
+  }
+  
+  .fondo-img {
+    display: block; 
+    max-width: 100vw; 
+    max-height: 80vh; 
+  }
+
+#pato{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    bottom: 40px;
+    left: 50px;
+    
+    transform: scale(3);
+    image-rendering: pixelated; /* para que se pueda ver bien la imagen (mejor calidad)*/
+    background-image: url("./pj/Run.png");
+    animation: correr 0.9s steps(6) infinite;
+}
+
+#boss{
+    position: absolute;
+    width: 128px;
+    height: 150px;
+    bottom: 145px;
+    right: 50px;
+    
+    transform: scale(2);
+    image-rendering: pixelated;
+    background-image: url("./boss/spr_enemy_finalboss_normal_strip6.png");
+    animation: correrBoss 5s steps(6) infinite;
+}
+#bossHit{
+    position: absolute;
+    width: 128px;
+    height: 150px;
+    bottom: 145px;
+    right: 30px;
+    
+    transform: scale(2);
+    image-rendering: pixelated;
+    background-image: url("./boss/spr_enemy_finalboss_hurt_strip2.png");
+    animation: bossHitAnm 5s steps(6) infinite;
+}
+
+#btn-iniciar{
+    padding: 15px 10px ;
+    background-color: greenyellow;
+    box-shadow: inset 3px 3px 3px  black;
+}
+
+@keyframes correr{
+    from{
+        background-position: 0 0;
+    }to{
+        background-position: -384px 0;
+    }
+}
+
+@keyframes correrBoss{
+    from{
+        background-position: 0 0;
+    }to{
+        background-position: -756px 0;
+    }
+}
+
+@keyframes bossHitAnm{
+
+}
