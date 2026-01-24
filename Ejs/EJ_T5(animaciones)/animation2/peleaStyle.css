@@ -43,6 +43,7 @@ body{
     height: 64px;
     bottom: 40px;
     left: 50px;
+    z-index: 1;
     
     transform: scale(3);
     image-rendering: pixelated; /* para que se pueda ver bien la imagen (mejor calidad) ya que es pixel art*/
@@ -53,11 +54,12 @@ body{
 
 #Empezar:checked ~ #pato{
     background-image: url(./sprites/pj/Walk.png);
+    image-rendering: pixelated;
     animation:
-        moverPato 2s linear forwards,
         caminarPato 1.6s steps(4),
-        saltoPato 2s ease-out forwards 2s;
-        
+        vueloPato 2.3s steps(4) 1.8s,
+        moverPato 2s linear,
+        saltoPato 2s ease-in-out 2s forwards;
 }
 
 
@@ -78,7 +80,7 @@ body{
 #Empezar:checked ~ #boss{
     
     animation: 
-        moverBoss 4s linear 1 forwards,   
+        moverBoss 3.6s linear 1 forwards,   
         caminarBoss 1s steps(6) infinite forwards;
         
 }
@@ -133,7 +135,8 @@ body{
 
 #Empezar:checked + .btn-empezar {
     opacity: 0;
-    transform: translateX(-50%) translateY(-100px) scale(0.6) rotate(10deg);
+    transform: translateX(-50%) translateY(-10%) scale(0.6) rotate(10deg);
+    z-index: -1;
     cursor: default;
     transition: all 0.5s linear;
 }
@@ -169,7 +172,14 @@ body{
     }
 }
 @keyframes vueloPato {
-    /* encajar los cambios con la cantidad de separaciones del saltoPat */
+    from{
+        background-image: url(./sprites/pj/Flap.png);
+        background-position: 0 0;
+    }to{
+        background-image: url(./sprites/pj/Flap.png);
+        background-position: 256px 0;
+        
+    }
 }
 
 /* position animations */
@@ -178,29 +188,34 @@ body{
     from{ 
         left: 50px;
      }to{
-        left: 200px;
+        left: 230px;
     }
 }
 @keyframes saltoPato {
     0% {
-        bottom: 40px;
-        left: 200px;   
+        bottom: 9.09%;
+        left: 27%;
+        transform: scale(3) rotate(-5deg);
     }
-    30% {
-        bottom: 220px;
-        left: 215px;
+    25%{
+        bottom: 40%;
+        left: 30.87%;
+        transform: scale(3) rotate(-10deg);
     }
-    60% {
-        bottom: 300px;
-        left: 235px;
+    50% {
+        bottom: 60.18%;
+        left: 35.45%;
+        transform: scale(3) rotate(-15deg);
     }
-    85% {
-        bottom: 230px;
-        left: 255px;
+    70% {
+        bottom: 65.73%; 
+        left: 45.66%;
+        transform: scale(3) rotate(5deg);
     }
-    100% {
-        bottom: 145px; 
-        left: 265px;
+    100%{
+        bottom: 50.64%;
+        left: 50.92%;
+        transform: scale(3) rotate(15deg);
     }
 }
 
@@ -223,7 +238,7 @@ body{
 
 @keyframes moverBoss{
     from{ }to{
-        right: 250px;
+        right: 245px;
     }
 }
 
