@@ -35,7 +35,7 @@ body{
   }
 
 
-/* Pato */
+/* ---------------------------Pato------------------------- */
 
 #pato{
     position: absolute;
@@ -47,10 +47,21 @@ body{
     transform: scale(3);
     image-rendering: pixelated; /* para que se pueda ver bien la imagen (mejor calidad) ya que es pixel art*/
     background-image: url("./sprites/pj/Idle.png");
-    animation: idlePato 0.8s steps(6) infinite;
+    animation: 
+        idlePato 0.8s steps(6) infinite;
 }
 
-/* Boss */
+#Empezar:checked ~ #pato{
+    background-image: url(./sprites/pj/Walk.png);
+    animation:
+        moverPato 2s linear forwards,
+        caminarPato 1.6s steps(4),
+        saltoPato 2s ease-out forwards 2s;
+        
+}
+
+
+/* ----------------------------Boss------------------------ */
 
 #boss{
     position: absolute;
@@ -62,7 +73,14 @@ body{
     transform: scale(2);
     image-rendering: pixelated;
     background-image: url("./sprites/boss/spr_enemy_finalboss_normal_strip6.png");
-    animation: idleBoss 1s steps(6) infinite;
+}
+
+#Empezar:checked ~ #boss{
+    
+    animation: 
+        moverBoss 4s linear 1 forwards,   
+        caminarBoss 1s steps(6) infinite forwards;
+        
 }
 
 #bossHit{
@@ -76,11 +94,14 @@ body{
     transform: scale(2);
     image-rendering: pixelated;
     background-image: url("./sprites/boss/spr_enemy_finalboss_hurt_strip2.png");
-    animation: bossHit 0.5s steps(2) infinite;
+    animation: 
+        bossHit 0.5s steps(2) infinite,
+        moverBoss 4s linear 1 forwards;
 }
+/* OJO FALTA CAMBIAR LAS ANIMACIONES DE BOSS IDLE Y CORRER */
 
 
-/* "botón de inicio combate" */
+/* ---------------"botón de inicio combate"--------------- */
 .btn-empezar{
     position: fixed;
      display: inline-block;
@@ -112,9 +133,9 @@ body{
 
 #Empezar:checked + .btn-empezar {
     opacity: 0;
-    transform: translateX(-50%) translateY(-100px) scale(0.6);
+    transform: translateX(-50%) translateY(-100px) scale(0.6) rotate(10deg);
     cursor: default;
-    transition: all 0.5s;
+    transition: all 0.5s linear;
 }
 
 #Empezar{
@@ -125,28 +146,92 @@ body{
     box-shadow: inset ;
 }
 
-/* animaciones */
+
+/* --------------------animaciones---------------------- */
+
+
+/* -------------------------Pato------------------------ */
+
+/* sprite animations */
 
 @keyframes idlePato{
     from{
         background-position: 0 0;
     }to{
-        background-position: -384px 0;
+        background-position: 384px 0;
     }
 }
-
-@keyframes idleBoss{
+@keyframes caminarPato{
     from{
         background-position: 0 0;
     }to{
-        background-position: -756px 0;
+        background-position: 256px 0;
     }
 }
+@keyframes vueloPato {
+    /* encajar los cambios con la cantidad de separaciones del saltoPat */
+}
+
+/* position animations */
+
+@keyframes moverPato {
+    from{ 
+        left: 50px;
+     }to{
+        left: 200px;
+    }
+}
+@keyframes saltoPato {
+    0% {
+        bottom: 40px;
+        left: 200px;   
+    }
+    30% {
+        bottom: 220px;
+        left: 215px;
+    }
+    60% {
+        bottom: 300px;
+        left: 235px;
+    }
+    85% {
+        bottom: 230px;
+        left: 255px;
+    }
+    100% {
+        bottom: 145px; 
+        left: 265px;
+    }
+}
+
+
+/* ------------------------Boss-------------------------- */
+
+
+/* sprite animations */
+
 
 @keyframes bossHit{
     from {
         background-position: 0 0;
     }to{
         background-position: -250px 0;
+    }
+}
+
+/* position animations */
+
+@keyframes moverBoss{
+    from{ }to{
+        right: 250px;
+    }
+}
+
+
+@keyframes caminarBoss{
+    from{
+        background-position: 0 0;
+    }to{
+        background-position: -756px 0;
     }
 }
