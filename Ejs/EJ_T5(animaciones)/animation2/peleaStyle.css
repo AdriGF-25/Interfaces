@@ -15,8 +15,10 @@ body{
 .montserrat{
     font-family: 'Montserrat';
 }
+/* ----------------------------------------------------- */
 
-/* --------------------------- */
+
+/* -------------------Escena/Fondo---------------------- */
 .escena {
     position: relative;
     left: 50%;
@@ -29,10 +31,40 @@ body{
   }
   
   .fondo-img {
-    display: block; 
-    max-width: 100vw; 
-    max-height: 80vh; 
+    display: block;
+    width: 860px;
+    height: 595px;   
+    object-fit: cover;  
   }
+
+/* -----------------------MensajeGanador-------------------- */
+
+#mensaje{
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    padding: 15px 10px;
+    border-radius: 50px;
+    z-index: 1;
+
+    outline: ridge white;
+    background-color:coral;
+    color: black;
+    font-weight: bolder;
+    cursor: crosshair;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform:
+        translateX(-50%)
+        rotate(20deg)
+        scale(12);
+}
+
+#Empezar:checked ~ #mensaje{
+    animation: smsGanador 0.8s ease-out 7s forwards;
+}
 
 
 /* ---------------------------Pato------------------------- */
@@ -43,10 +75,9 @@ body{
     height: 64px;
     bottom: 40px;
     left: 50px;
-    z-index: 1;
     
     transform: scale(3);
-    image-rendering: pixelated; /* para que se pueda ver bien la imagen (mejor calidad) ya que es pixel art*/
+    image-rendering: pixelated; /*para que se pueda ver bien la imagen (mejor calidad) ya que es pixel art */
     background-image: url("./sprites/pj/Idle.png");
     animation: 
         idlePato 0.8s steps(6) infinite;
@@ -59,7 +90,8 @@ body{
         caminarPato 1.6s steps(4),
         vueloPato 2.3s steps(4) 1.8s,
         moverPato 2s linear,
-        saltoPato 2s ease-in-out 2s forwards;
+        saltoPato 2s ease-in-out 2s forwards,
+        colocarGanador 1s forwards 6s;
 }
 
 
@@ -74,14 +106,14 @@ body{
     
     transform: scale(2);
     image-rendering: pixelated;
-    background-image: url("./sprites/boss/spr_enemy_finalboss_normal_strip6.png");
+    background-image: url("./sprites/boss/spr_enemy_finalboss_normal_strip6.png");        
 }
 
 #Empezar:checked ~ #boss{
-    
     animation: 
-        moverBoss 3.6s linear 1 forwards,   
-        caminarBoss 1s steps(6) infinite forwards;
+        moverBoss 3s linear 1 forwards,   
+        caminarBoss 1s steps(6) 3.5,
+        desapareceBoss 0.2s ease-out 4s forwards;
         
 }
 
@@ -92,12 +124,15 @@ body{
     bottom: 145px;
     right: 30px;
     
-    display: none;
+    visibility: hidden;
     transform: scale(2);
     image-rendering: pixelated;
     background-image: url("./sprites/boss/spr_enemy_finalboss_hurt_strip2.png");
+}
+
+#Empezar:checked ~ #bossHit{
     animation: 
-        bossHit 0.5s steps(2) infinite,
+        bossHit 0.5s steps(2) 3 4.1s ,
         moverBoss 4s linear 1 forwards;
 }
 /* OJO FALTA CAMBIAR LAS ANIMACIONES DE BOSS IDLE Y CORRER */
@@ -141,16 +176,24 @@ body{
     transition: all 0.5s linear;
 }
 
-#Empezar{
-    display: none;
-}
-
 .btn-empezar + #Empezar:checked{
     box-shadow: inset ;
 }
 
 
 /* --------------------animaciones---------------------- */
+
+
+@keyframes smsGanador {
+     from{ }to{
+        opacity:1;
+        transform: translate(-50%) rotate(-15deg) scale(2.2);
+        left: 25%;
+        box-shadow: 
+        inset 0 0 20px black,
+        0 0 20px red;
+    }
+}
 
 
 /* -------------------------Pato------------------------ */
@@ -182,6 +225,7 @@ body{
     }
 }
 
+
 /* position animations */
 
 @keyframes moverPato {
@@ -193,29 +237,36 @@ body{
 }
 @keyframes saltoPato {
     0% {
-        bottom: 9.09%;
+        bottom: 10%;
         left: 27%;
         transform: scale(3) rotate(-5deg);
     }
     25%{
-        bottom: 40%;
+        bottom: 20%;
         left: 30.87%;
         transform: scale(3) rotate(-10deg);
     }
     50% {
-        bottom: 60.18%;
+        bottom: 30.18%;
         left: 35.45%;
         transform: scale(3) rotate(-15deg);
     }
-    70% {
-        bottom: 65.73%; 
+    60%{
+        bottom: 40.73%; 
         left: 45.66%;
         transform: scale(3) rotate(5deg);
     }
     100%{
-        bottom: 50.64%;
-        left: 50.92%;
-        transform: scale(3) rotate(15deg);
+        bottom: 40.73%; 
+        left: 45.66%;
+        transform: scale(3);
+    }
+}
+
+@keyframes colocarGanador {
+    from{ }to{
+        bottom: 30.73%; 
+        left: 45.66%;
     }
 }
 
@@ -225,14 +276,24 @@ body{
 
 /* sprite animations */
 
+@keyframes caminarBoss{
+    from{
+        background-position: 0 0;
+    }to{
+        background-position: -756px 0;
+    }
+}
+
 
 @keyframes bossHit{
     from {
+        visibility: visible;
         background-position: 0 0;
     }to{
-        background-position: -250px 0;
+        background-position: 250px 0;
     }
 }
+
 
 /* position animations */
 
@@ -242,11 +303,13 @@ body{
     }
 }
 
-
-@keyframes caminarBoss{
-    from{
-        background-position: 0 0;
-    }to{
-        background-position: -756px 0;
+@keyframes desapareceBoss {
+    from{ }to{
+        opacity: 0;
     }
 }
+
+/* --------------------------------------------------- */
+
+
+
