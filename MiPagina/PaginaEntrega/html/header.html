@@ -5,84 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        header {
-            padding: 20px 40px 30px;
-        }
-
-        nav {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
-            background-color: rgb(246, 209, 214);
-            border-radius: 100px;
-            padding: 5px 20px;
-            gap: 20px;
-        }
-        .nav-buttons {
-            display: grid;
-            grid-template-columns: repeat(2,40px);
-            gap: 15px;
-            justify-items: center;
-            align-items: center;
-        }
-
-        .icono-boton {
-            display: grid;
-            place-items: center;
-            width: 40px;
-            height: 40px;
-            background-color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            color: black;
-            position: relative;
-            font-size: 20px;
-        }
-        .icono-boton:hover {
-            background-color: rgba(0,0,255,0.2);
-        }
-
-        #logo img {
-            height: 50px;
-            padding-left: 20px;
-        }
-
-        ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(3, auto); 
-            justify-content: center;
-            gap: 20px;
-            padding: 5px 0;
-        }
-
-        li {
-            border-radius: 100px;
-            padding: 5px;
-        }
-
-        li > a {
-            color: black;
-            display: block;
-            padding: 5px 15px;
-            text-decoration: none;
-            border-radius: 20px;
-        }
-
-        li > a.activo {
-            background-color: blue;
-            color: white;
-        }
-
-        li > a:hover:not(.activo) {
-            background-color: rgba(0, 0, 255, 0.2);
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            transform: translateY(-3px);
-        }
-
-        li > a.activo:hover {
-            transform: translateY(-3px);
-        }
+        
     </style>
 </head>
 <body>
@@ -110,6 +33,5 @@
             </div>
         </nav>
     </header>
-    
 </body>
 </html>
