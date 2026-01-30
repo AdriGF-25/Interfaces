@@ -76,10 +76,16 @@ li > a.activo:hover {
     transform: translateY(-3px);
 }
 
+/* screens */
+
 @media screen and (max-width: 780px) {
-    nav{
-        display: flex;
-        flex-direction: column;
+    #logo{
+        justify-content: start;
+    }
+    
+    
+    .mn-hamburguesa{
+
     }
     
 }
