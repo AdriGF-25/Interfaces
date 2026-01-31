@@ -77,15 +77,35 @@ li > a.activo:hover {
 }
 
 /* screens */
-
+/* 
 @media screen and (max-width: 780px) {
+    header{
+        padding: 15px 15px 20px;
+    }
+    nav {
+        grid-template-columns: 1fr repeat(3);
+        padding: 8px 8px;  
+        border-radius: 50px;  
+    }
     #logo{
-        justify-content: start;
+        display: flex;
+        justify-content: flex-start;
     }
-    
-    
-    .mn-hamburguesa{
+    ul{
+        grid-template-columns: repeat(3,auto);
+        gap: 8px;
+    }
+    .mn-hamburguesa {
+        display: flex;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: white;
+        font-size: 20px;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
 
-    }
     
-}
+} */

@@ -12,8 +12,8 @@
     <header> 
         <nav>
             <div id="logo">
-                <button id="btn-hamburguesa"></button>
-                <a href="#">
+                <!-- <button id="btn-hamburguesa"></button>
+                <a href="#"> -->
                     <img src="../imagenes/Logo_PhotoLens.png" alt="Logo PhotoLens">
                 </a>
             </div>
@@ -34,7 +34,23 @@
             </div>
         </nav>
     </header>
-    <form class="formulario">
+
+    <div id="carruselDBlue">
+        <input type="radio" name="carousel" id="slide1" class="slide-control" checked>
+        <input type="radio" name="carousel" id="slide2" class="slide-control">
+        <input type="radio" name="carousel" id="slide3" class="slide-control">
+        <div class="carousel-inner">
+            <img src="../imagenes/leonas_00000000_260115115501_512x288.webp" alt="img1" class="imgCDB">
+            <img src="../imagenes/EverestNorth_04_4x3.avif" alt="img2" class="imgCDB">
+            <img src="../imagenes/NationalGeographic_2720944_4x3.avif" alt="img3" class="imgCDB">
+            
+            <label for="slide3" class="arrowL">❮</label>
+            <label for="slide2" class="arrowR">❯</label>
+        </div>
+    </div>
+
+
+    <!-- <form class="formulario">
         <h2>Datos Personales</h2>
     
         <label for="nombre">Nombre:</label>
@@ -54,7 +70,10 @@
         </select>
     
         <button type="submit">Enviar</button>
-    </form>
+    </form> -->
+
+
+
     <footer>
         <div class="fcontenido">
             <div class="finfo">
