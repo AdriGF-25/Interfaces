@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novedades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/novedades.css" >
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -35,32 +36,55 @@
         </nav>
     </header>
 
-    <div id="carruselDBlue">
-        <div class="slideItem">
-            <p class="number">1</p>
-            <input type="radio" name="carousel" id="slide1" class="slide-control" checked>
-            <p class="description">Everest</p>
-        </div>
-        <div class="slideItem">
-            <p class="number">2</p>
-            <input type="radio" name="carousel" id="slide2" class="slide-control">
-            <p class="description">idk</p>
-        </div>
-        <div class="slideItem">
-            <p class="number">3</p>
-            <input type="radio" name="carousel" id="slide3" class="slide-control">
-            <p class="description">idk</p>
-        </div>
+    <div class="divisiones">
+        <!----------------------FILA 1------------------------>
 
-        <div class="carousel-inner">
-            <img src="../imagenes/leonas_00000000_260115115501_512x288.webp" alt="img1" class="imgCDB">
-            <img src="../imagenes/EverestNorth_04_4x3.avif" alt="img2" class="imgCDB">
-            <img src="../imagenes/NationalGeographic_2720944_4x3.avif" alt="img3" class="imgCDB">
-            
-            <label for="slide3" class="arrowL">❮</label>
-            <label for="slide2" class="arrowR">❯</label>
-        </div>
-    </div>
+        <section class="fila">
+            <div id="imgInicio-div">
+                <img src="../imagenes/recreacion-conceptual-de-hd-137010-b_00000000_260129133342_512x288.webp" alt="">
+                <h2 class="title">Un 'gemelo' de la Tierra a solo 146 años luz es potencialmente habitable</h2>
+                <p class="description">XXXXXX</p>
+            </div>
+        </section>
+        
+        <!----------------------FILA 2------------------------>
+
+        <section class="fila">
+            <div id="carruselDBlue">
+                <div class="carousel-inner">
+                    <div class="slideItem">
+                        <p class="number">1</p>
+                        <input type="radio" name="carousel" id="slide1" class="slide-control" checked>
+                        <img src="../imagenes/leonas_00000000_260115115501_512x288.webp" alt="img1" class="imgCDB">
+                        <p class="description">Everest</p>
+                    </div>
+                    <div class="slideItem">
+                        <p class="number">2</p>
+                        <input type="radio" name="carousel" id="slide2" class="slide-control">
+                        <img src="../imagenes/EverestNorth_04_4x3.avif" alt="img2" class="imgCDB">
+                        <p class="description">idk</p>
+                    </div>
+                    <div class="slideItem">
+                        <p class="number">3</p>
+                        <input type="radio" name="carousel" id="slide3" class="slide-control">
+                        <img src="../imagenes/NationalGeographic_2720944_4x3.avif" alt="img3" class="imgCDB">
+                        <p class="description">idk</p>
+                    </div>
+                    
+                    <label for="slide3" class="arrowL">❮</label>
+                    <label for="slide2" class="arrowR">❯</label>
+                </div>
+            </div>
+        </section>
+        
+        <!----------------------FILA 3------------------------>
+
+        <section class="fila">
+            <div id="imgFinal-div">
+                <img src="../imagenes/tu-imagen-final.jpg" alt="">
+                <p>Tu texto final aquí</p>
+            </div>
+        </section>
 
 
     <!-- <form class="formulario">
