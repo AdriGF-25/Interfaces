@@ -9,14 +9,14 @@ footer {
 
 .fcontenido {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     align-items: start;
     column-gap: 40px;
 }
 
 .finfo {
     max-width: 300px;
-    
+    border-right: 1px solid black;
 }
 
 .finfo h3 {
@@ -27,6 +27,12 @@ footer {
 .finfo p {
     margin: 5px 0;
 }
+
+
+.fsobre{
+    
+}
+
 
 .fredes {
     display: grid;
