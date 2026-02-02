@@ -25,9 +25,10 @@ body {
 /* -----------------------fila 1------------------------ */
 
 .fila:nth-child(1){
-    position: relative;
+    /* position: relative; */
     background-color: #030013;
     padding: 50px;
+    z-index: -1;
 }
 #imgInicio-div{
     contain: layout; /* a diferencia de contain content , layout lo que hace es que se pueda vez el texto en este caso , aunque estea fuera*/
@@ -60,5 +61,10 @@ body {
 /* -----------------------fila 3------------------------ */
 
 .fila:nth-child(3){
+    position: relative;
     background-color: #030013;
+    padding: 50px;
 }
+
+
+/* CAMBIAR FOTOS Y DEMÁS */
