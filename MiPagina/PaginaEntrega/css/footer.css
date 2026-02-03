@@ -4,20 +4,27 @@ footer {
     padding: 20px 40px;
     font-size: 15px;
     color: black;
-    
 }
 
 .fcontenido {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: start;
-    column-gap: 40px;
-}
+    padding-bottom: 1.5%;
+    border-bottom: 1px solid black;
+    column-gap: 1px;
 
-.finfo {
-    max-width: 300px;
+    align-items: stretch; 
+}
+.fcontenido > .finfo,.fsobre,.fredes{
+    padding: 5%;
+    justify-items: center;
+}
+.fcontenido > div:not(:last-child) {
     border-right: 1px solid black;
 }
+
+/*  En estas líneas, a partir del stretch ,  Que por lo que he entendido, Lo que hace es Simplemente Expandir el El contenedor hasta el límite del contenedor padre. que era la solución más fácil para el Borde que quería poner. Sin que tocara el borde De abajo y que quedara. relativamente Bien. */
 
 .finfo h3 {
     margin-bottom: 10px;
@@ -27,13 +34,6 @@ footer {
 .finfo p {
     margin: 5px 0;
 }
-
-
-.fsobre{
-    
-}
-
-
 .fredes {
     display: grid;
     justify-items: center;
@@ -72,4 +72,9 @@ footer {
     padding-top: 10px;
     font-size: 14px;
     color: gray;
+}
+
+.CC{
+    margin-top: 1.5%;
+    justify-items: center;
 }

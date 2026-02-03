@@ -50,29 +50,45 @@
         <!--------------------FILA 2--------------------->
 
         <section class="fila">
-            <div id="carruselDBlue">
-                <div class="carousel-inner">
-                    <div class="slideItem">
-                        <p class="number">1</p>
-                        <input type="radio" name="carousel" id="slide1" class="slide-control" checked>
-                        <img src="../imagenes/leonas_00000000_260115115501_512x288.webp" alt="img1" class="imgCDB">
+            <div id="carouselDBlue" class="carousel-container">
+                <button class="carousel-prev">❮</button>
+                
+                <div class="carousel-track">
+                    <!----------Grupo 1 (img 0,1,2)----------->
+                    <div class="carousel-slide">
+                        <img src="../imagenes/leonas_00000000_260115115501_512x288.webp" alt="1">
                         <p class="description">Everest</p>
                     </div>
-                    <div class="slideItem">
-                        <p class="number">2</p>
-                        <input type="radio" name="carousel" id="slide2" class="slide-control">
-                        <img src="../imagenes/EverestNorth_04_4x3.avif" alt="img2" class="imgCDB">
-                        <p class="description">idk</p>
+                    <div class="carousel-slide">
+                        <img src="../imagenes/EverestNorth_04_4x3.avif" alt="2">
+                        <p class="description">Everest Norte</p>
                     </div>
-                    <div class="slideItem">
-                        <p class="number">3</p>
-                        <input type="radio" name="carousel" id="slide3" class="slide-control">
-                        <img src="../imagenes/NationalGeographic_2720944_4x3.avif" alt="img3" class="imgCDB">
-                        <p class="description">idk</p>
+                    <div class="carousel-slide">
+                        <img src="../imagenes/NationalGeographic_2720944_4x3.avif" alt="3">
+                        <p class="description">National Geo</p>
                     </div>
                     
-                    <label for="slide3" class="arrowL">❮</label>
-                    <label for="slide2" class="arrowR">❯</label>
+                    <!----------Grupo 1 (img 3,4,5)----------->
+                    <div class="carousel-slide">
+                        <img src="../imagenes/foto4.jpg" alt="4">
+                        <p class="description">Foto 4</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../imagenes/foto5.jpg" alt="5">
+                        <p class="description">Foto 5</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../imagenes/foto6.jpg" alt="6">
+                        <p class="description">Foto 6</p>
+                    </div>
+                </div>
+                
+                <button class="carousel-next">❯</button>
+                
+                
+                <div class="carousel-pagination">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
         </section>

@@ -54,10 +54,8 @@ body {
 }
 /* -----------------------fila 2------------------------ */
 
-/* no es un carrusel , corregir , va a ser como una animacion infinita que te deje clicar y redirija a la noticia */
-.fila:nth-child(2){
-    background-color: #17029F;
-}
+/* no es un carrusel , corregir , va a ser como una animacion infinita (mover hacia un lado constante) que te deje clicar y redirija a la noticia  // APUNTE PROYECTO FINAL*/
+
 /* -----------------------fila 3------------------------ */
 
 .fila:nth-child(3){
