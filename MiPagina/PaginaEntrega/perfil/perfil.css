@@ -18,7 +18,7 @@
   
   /* --------------------FILA 1--------------------- */
   .fila-perfil-form {
-    background-color: #f6d1d6;
+    background-color:#17029F;
     border-radius: 20px;
     padding: 30px;
     display: grid;
@@ -30,7 +30,7 @@
   .formulario {
     display: grid;
     gap: 10px;
-    color: black;
+    color: white;
   }
   
   .formulario h2 {
@@ -64,7 +64,7 @@
     gap: 15px;
     justify-items: center;
     align-content: center;
-    color: black;
+    color: white;
   }
   
   .perfil-foto img {
