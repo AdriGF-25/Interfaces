@@ -52,9 +52,6 @@ body {
     transform: translateY(75%);
 }
 /* -----------------------fila 2------------------------ */
-/* No es un carrusel con botones, es una animación infinita horizontal
-   que deja hacer clic en cada noticia. */
-
 .fila:nth-child(2) {
   background-color: #17029F;
   padding: 40px;
@@ -74,13 +71,11 @@ body {
   animation: carouselInfinito 60s linear infinite;
   transition: 0.3s ease;
 }
-
 .carousel-slide {
-  position: relative;
   cursor: pointer;
-  overflow: hidden;
+  transform: translateY(0) scale(1);
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   flex: 0 0 33.33%;
-  transition: all 0.3s ease;
 }
 
 .carousel-slide img {
@@ -91,6 +86,7 @@ body {
 
 .carousel-slide .description {
   position: absolute;
+  bottom: 2.5%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -104,21 +100,20 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.33%);
+    transform: translateX(-50%);
   }
 }
-/* Efectos cuando no hay hover directo sobre una tarjeta (fondo desenfocado) */
-/* .carousel-track:hover .carousel-slide {
-  filter: blur(5px);
-  opacity: 0.5;
-  transform: scale(0.8);
-  z-index: 2;
-} */
 
-.carousel-slide:hover {
-  filter: blur(0);
+
+/* hovers */
+.carousel-track:hover .carousel-slide {
+  transform: translateY(10px) scale(0.9);
+  opacity: 0.7;
+}
+
+.carousel-track:hover .carousel-slide:hover {
+  transform: translateY(-10px) scale(1.05);
   opacity: 1;
-  transform: scale(1.1);
   z-index: 10;
 }
 
@@ -129,6 +124,3 @@ body {
     background-color: #030013;
     padding: 50px;
 }
-
-
-/* CAMBIAR FOTOS Y DEMÁS */

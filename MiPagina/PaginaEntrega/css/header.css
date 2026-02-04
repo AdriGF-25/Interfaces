@@ -70,7 +70,7 @@ li > a {
     border-radius: 20px;
 }
 
-li > a.activo {
+.activo {
     background-color: blue;
     color: white;
 }
@@ -84,37 +84,3 @@ li > a:hover:not(.activo) {
 li > a.activo:hover {
     transform: translateY(-3px);
 }
-
-/* screens */
-/* 
-@media screen and (max-width: 780px) {
-    header{
-        padding: 15px 15px 20px;
-    }
-    nav {
-        grid-template-columns: 1fr repeat(3);
-        padding: 8px 8px;  
-        border-radius: 50px;  
-    }
-    #logo{
-        display: flex;
-        justify-content: flex-start;
-    }
-    ul{
-        grid-template-columns: repeat(3,auto);
-        gap: 8px;
-    }
-    .mn-hamburguesa {
-        display: flex;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: white;
-        font-size: 20px;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-} */
