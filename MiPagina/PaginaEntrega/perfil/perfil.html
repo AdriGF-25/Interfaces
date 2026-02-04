@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - PhotoLens</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/perfil.css" />
+  </head>
+  <body>
+    <!-- --------------------HEADER--------------------- -->
+    <header>
+      <nav>
+        <div id="logo">
+          <a href="novedades.html">
+            <img src="../imagenes/LogoPhotoLens.png" alt="Logo PhotoLens" />
+          </a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="novedades.html">Novedades</a></li>
+          <li><a href="mercado.html">Mercado</a></li>
+          <li><a href="foros.html">Foros</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+          <a href="carrito.html" class="icono-boton">
+            🛒
+          </a>
+          <a href="perfil.html" class="icono-boton">
+            <span class="badge">1</span>
+            👤
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="perfil">
+      <!-- --------------------FILA 1--------------------- -->
+      <section class="fila fila-perfil-form">
+        <form class="formulario">
+          <h2>Datos personales</h2>
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="pais">País</label>
+          <select id="pais" name="pais">
+            <option value="es">España</option>
+            <option value="mx">México</option>
+            <option value="ar">Argentina</option>
+          </select>
+
+          <button type="submit">Guardar cambios</button>
+        </form>
+
+        <div class="perfil-foto">
+          <img src="../imagenes/perfil-foto.jpg" alt="Foto de perfil" />
+          <p>Actualiza tu información para disfrutar de una experiencia más personalizada.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- --------------------FOOTER--------------------- -->
+    <footer>
+      <div class="fcontenido">
+        <!-- mismo contenido que en las demás páginas -->
+      </div>
+      <div class="copy">
+        <p class="CC">
+          PhotoLens 2025 ·
+          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0">CC BY-NC-ND 4.0</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
