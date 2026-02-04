@@ -52,76 +52,74 @@ body {
     transform: translateY(75%);
 }
 /* -----------------------fila 2------------------------ */
-
-/* no es un carrusel , corregir , va a ser como una animacion infinita (mover hacia un lado constante) que te deje clicar y redirija a la noticio */
+/* No es un carrusel con botones, es una animación infinita horizontal
+   que deja hacer clic en cada noticia. */
 
 .fila:nth-child(2) {
-    background-color: #17029F;
-    padding: 40px;
-}
-.carousel-container{
-    position: relative;
-    margin: 0;
-    overflow: hidden;
-    overflow: hidden;
-}
-.carousel-track{
-    display: flex;
-    justify-content: center;
-}
-.carousel-slide{
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    flex:  0 0 33.33%;
-    transition: all 0.3s ease;
-}
-.carousel-slide img {
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
-}
-.carousel-slide .description{
-    position: absolute;
-    z-index: 100;
-    bottom: 2.5%;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
+  background-color: #17029F;
+  padding: 40px;
 }
 
+/* Contenedor que oculta lo que se sale por los lados */
+.carousel-container {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Pista que se mueve en horizontal */
 .carousel-track {
-    display: flex;
-    justify-content: center;
-    animation: carouselInfinito 60s linear infinite;
-    transition: 0.3s ease;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  animation: carouselInfinito 60s linear infinite;
+  transition: 0.3s ease;
 }
 
-/* .carousel-track:hover {
-    animation-play-state: paused;
-} */
+.carousel-slide {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  flex: 0 0 33.33%;
+  transition: all 0.3s ease;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.carousel-slide .description {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
 
 @keyframes carouselInfinito {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-33.33%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
 }
-
-/*hacer la animación mas lenta y quitar las img extra del html, ajustar el tiempo*/
-
-.carousel-track:hover .carousel-slide{
-    z-index: 2;
-    filter: blur(5px);
-    opacity: 0.5;
-    transform: scale(0.8);
-}
+/* Efectos cuando no hay hover directo sobre una tarjeta (fondo desenfocado) */
+/* .carousel-track:hover .carousel-slide {
+  filter: blur(5px);
+  opacity: 0.5;
+  transform: scale(0.8);
+  z-index: 2;
+} */
 
 .carousel-slide:hover {
-    filter: blur(0);
-    opacity: 1;
-    transform: scale(1.1);
-    z-index: 10;
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 10;
 }
 
 /* -----------------------fila 3------------------------ */
