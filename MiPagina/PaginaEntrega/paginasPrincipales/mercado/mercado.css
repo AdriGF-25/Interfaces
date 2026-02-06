@@ -10,7 +10,7 @@
     color: white;
   }
   
-  /* Contenedor general similar a .divisiones */
+  /* Contenedor general */
   .mercado {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -31,11 +31,11 @@
   .fila-mercado-titulo p {
     font-size: 1rem;
   }
-  
+
   /* -------- FILA 2: grid productos -------- */
   .fila-mercado-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
@@ -49,7 +49,7 @@
   
   .producto img {
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border-radius: 8px;
   }
