@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #F3F1DD;
+}
+
+
+/* ---------------------------------header--------------------------------- */
+
+#header {
+    background-color: #3E405B;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+#nav-wrapper {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* ---------------login------------------------ */
+
+.login {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 7vh;
+    float: right;
+}
+.login .fas{
+    width: 80vw;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    margin: 5px;
+}
+/* ---------------logo------------------------ */
+
+.logo{
+    display: flex;
+    background-color: #80B299;
+    width: 80vw;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+    padding-left: 10vw;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ---------------menu------------------------ */
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#menu a{
+    width: 80vw;
+    padding: 10px 30px 10px;
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+    text-decoration: none;
+}
+.activo{
+    background-color: orange;
+    text-shadow: 1px 1px 5px white;
+}
+
+
+
+/* ---------------------------------main--------------------------------- */
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 305px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    color: #025389;
+
+}
+.card > *{
+    margin-top: 20px;
+}
+
+
+
+
+/* ---------------------------------footer--------------------------------- */
+
+#footer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+
+    background-color: #3E405B;
+    padding:20px 0 20px;
+}
+#footer a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+}
+#footer >.politicas a{
+    margin-bottom: 10px;
+}
+
+
+/* ---------------------------------animaciones--------------------------------- */
+/* #id > .card:hover{
+    animation: 
+        bajarI 0.6s linear forwards,
+        bajarTexto 0.6s linear forwards,
+        moverTexto 0.6s linear forwards;
+} */
+
+.logo:hover > .fa-globe{
+    animation: animacionlogo 0.5s linear forwards;
+}
+.logo > .fa-globe{
+    animation: idleLogo 4s infinite forwards linear;
+}
+
+
+@media bajarI {
+
+}
+
+
+@media bajarTexto {
+    
+}
+
+
+@media moverTexto {
+    
+}
+
+@keyframes animacionlogo{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+        background-color: white;
+    }
+    50%{
+        transform: translateY(100px);
+        opacity: 0.2;
+        background-color: white;
+
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        background-color: white;
+
+    }
+}
+
+@keyframes idleLogo {
+    0%{
+        background-color: #80B299;
+        transform: rotateY(0deg) translateY(0);
+    }
+    50%{
+        background-color: white;
+        transform: rotateY(180deg) translateY(-5px);
+    }
+    100%{
+        background-color: #80B299;
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+
+/* ---------------------------------responsive--------------------------------- */
+
+@media  screen and (min-width:481px) and (max-width:700px) {
+    header {
+        background-color: #3E405B;
+        width: 100vw;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+
+    /* main */
+
+    
+    #menu{
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    #main{
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+    .card:last-child{
+        grid-column: span 2;
+        width: 50%;
+    }
+}
+
+@media  screen and (min-width:701px) and (max-width:700px) {
+    header {
+        background-color: #3E405B;
+        width: 100vw;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    #menu{
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+/* ---------------------------------hovers--------------------------------- */
+#menu a:hover:not(.activo){
+    color: orange;
+    transition: color 0.5s ease-in-out;
+}
+.fas:hover{
+    background-color: orange;
+    transition: color 0.5s ease-in-out;
+}
+
+
+/* ---------------------------------iconos--------------------------------- */
+
+.login .fa-sign-in-alt, .login .fa-shopping-cart{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: yellowgreen;
+}
+
+.fa-globe{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: yellowgreen;
+    z-index: 100;
+}
+#footer .redes > a{
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    background-color: yellowgreen;
+    z-index: 100;
+}
+.card .fas{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    padding: 40px;
+    background-color: yellowgreen;
+    z-index: 100;
+}
