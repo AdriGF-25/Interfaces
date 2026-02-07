@@ -5,8 +5,6 @@ header {
     font-size: larger;
     top: 0;
     justify-content: center;
-    z-index: 1;
-    position: relative;
 }
 
 nav {
@@ -83,4 +81,99 @@ li > a:hover:not(.activo) {
 
 li > a.activo:hover {
     transform: translateY(-3px);
+}
+
+/* ------------------RESPONSIVE------------------ */
+
+/* Pantalla grande: hasta 1650px */
+@media (max-width: 1650px) {
+  #logo img {
+    height: 70px;
+  }
+
+  li > a {
+    padding: 5px 12px;
+  }
+}
+
+/* Pantalla media*/
+@media (max-width: 1350px) {
+  nav {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    padding: 8px 5px;
+  }
+
+  #logo img {
+    height: 65px;
+  }
+
+  li > a {
+    padding: 5px 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Portátil */
+@media (max-width: 1120px) {
+  header {
+    padding: 30px 20px;
+  }
+
+  nav {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.6rem;
+    padding: 6px 10px;
+  }
+
+  #logo img {
+    height: 60px;
+  }
+
+  li > a {
+    padding: 4px 10px;
+    font-size: 0.9rem;
+  }
+
+  .nav-buttons {
+    margin-right: 10px;
+    gap: 5%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 820px) {
+  nav {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: none; /* ocultamos el menú para tablet/móvil, la idea es para hacer el menu hamburguesa */
+  }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  #logo img {
+    height: 50px;
+  }
+
+  .nav-buttons {
+    gap: 8px;
+  }
+
+  .boton-hamburguesa {
+    width: 40px;
+    height: 40px;
+  }
+
+  li > a {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
 }
