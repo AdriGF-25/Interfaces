@@ -1,6 +1,4 @@
-/* ==============================
-   RESET Y BASE
-============================== */
+/*------------ RESET Y BASE ------------*/
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +9,7 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
-/* ==============================
-   HEADER
-============================== */
+/*------------ HEADER ------------*/
 header {
   display: flex;
   justify-content: center;
@@ -22,9 +18,7 @@ header {
   width: 100%;
 }
 
-/* ==============================
-   NAV
-============================== */
+/*------------ NAV ------------*/
 nav {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -39,14 +33,12 @@ nav {
   z-index: 999;
 }
 
-/* LOGO */
+/*------------ LOGO ------------*/
 #logo img {
   height: 60px;
 }
 
-/* ==============================
-   MENÚ ESCRITORIO
-============================== */
+/*------------ MENÚ ESCRITORIO ------------*/
 ul.menu {
   list-style: none;
   display: grid;
@@ -80,9 +72,7 @@ ul.menu li > a.activo:hover {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ==============================
-   BOTONES DERECHA
-============================== */
+/*------------ BOTONES DERECHA ------------*/
 .nav-buttons {
   display: flex;
   gap: 10px;
@@ -119,9 +109,7 @@ ul.menu li > a.activo:hover {
   background-color: lightblue;
 }
 
-/* ==============================
-   MENÚ MÓVIL
-============================== */
+/*------------ MENÚ MÓVIL ------------*/
 .check-menu {
   display: none;
 }
@@ -169,20 +157,50 @@ ul.menu li > a.activo:hover {
   transform: translateX(4px);
 }
 
-/* Mostrar menú móvil cuando checkbox está activo */
 .check-menu:checked ~ .menu-movil {
   display: flex;
 }
 
-/* ==============================
-   RESPONSIVE
-============================== */
-@media (max-width: 820px) {
+/*------------ RESPONSIVE 1000px ------------*/
+@media (max-width: 1000px) {
+  ul.menu {
+    gap: 15px;
+  }
+
+  .nav-buttons a {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/*------------ RESPONSIVE 750px ------------*/
+@media (max-width: 750px) {
   ul.menu {
     display: none;
   }
 
   .boton-hamburguesa {
     display: block;
+  }
+
+  .nav-buttons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  nav {
+    width: 90%;
+  }
+}
+
+/*------------ RESPONSIVE 480px ------------*/
+@media (max-width: 480px) {
+  .boton-hamburguesa {
+    font-size: 1.5rem;
+  }
+
+  .nav-buttons a {
+    width: 35px;
+    height: 35px;
   }
 }

@@ -327,68 +327,62 @@ body {
 
 /* --------------RESPONSIVE----------------- */
 
-
-/* Pantalla grande */
-@media (max-width: 1650px) {
-  .fila-mercado-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 1350px) {
-  .fila-mercado-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Portátil */
-@media (max-width: 1120px) {
-  .mercado {
-    padding: 130px 25px 45px;
-  }
-
-  .fila-mercado-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .producto img {
-    height: 240px;
-  }
+/* DESKTOP - ≥1001px: 5 columnas full */
+@media (min-width: 1001px) {
+    .fila-mercado-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .mercado {
+        padding: 140px 40px 50px;
+    }
+    
+    .fila-mercado-titulo h1 {
+        font-size: 2.8rem;
+    }
 }
 
-/* Tablet */
-@media (max-width: 820px) {
-  .fila-mercado-titulo h1 {
-    font-size: 2.2rem;
-  }
-
-  .fila-mercado-titulo p {
-    font-size: 0.95rem;
-  }
-
-  .modal-filtro {
-    width: 340px;
-  }
+/* TABLET - 751px a 1000px: 3 columnas */
+@media (min-width: 751px) and (max-width: 1000px) {
+    .mercado {
+        padding: 130px 30px 45px;
+    }
+    
+    .fila-mercado-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .fila-mercado-titulo h1 {
+        font-size: 2.4rem;
+    }
 }
 
-/* Móvil */
-@media (max-width: 480px) {
-  .mercado {
-    padding: 120px 16px 40px;
-  }
-
-  .fila-mercado-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .producto {
-    padding: 14px;
-  }
-
-  .producto img {
-    height: 220px;
-  }
-
-  .filtro {
-    justify-self: center;
-  }
+/* MÓVIL - ≤750px: 1 columna */
+@media (max-width: 750px) {
+    .mercado {
+        padding: 110px 16px 35px;
+    }
+    
+    .fila-mercado-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    
+    .fila-mercado-titulo h1 {
+        font-size: 1.9rem;
+    }
+    
+    .producto img {
+        height: 210px;
+    }
+    
+    .producto {
+        padding: 12px;
+    }
+    
+    .filtro {
+        justify-self: center;
+    }
 }
+
