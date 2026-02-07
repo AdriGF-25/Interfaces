@@ -321,3 +321,102 @@ transform: translateY(0);
   font-size: 0.9rem;
 }
 }
+
+
+/* --------------------CUPÓN--------------------- */
+.fila-cupon {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.fila-cupon input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.08);
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.25s ease, background 0.25s ease;
+}
+
+.fila-cupon input:focus {
+  border: 1px solid rgba(255,255,255,0.35);
+  background-color: rgba(255,255,255,0.12);
+}
+
+.fila-cupon button {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.fila-cupon button:hover {
+  transform: translateY(-2px);
+  background-color: #f6d1d6;
+  color: black;
+}
+
+/* --------------------SEPARADOR OR--------------------- */
+.or-separador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 15px;
+}
+
+.or-separador .linea {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.or-separador .texto {
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --------------------SEGUIR COMPRANDO--------------------- */
+.seguir-comprando {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.seguir-comprando a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background-color: rgba(255,255,255,0.15);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.seguir-comprando a:hover {
+  background-color: #f6d1d6;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* --------------------RESPONSIVE CUPÓN y OR--------------------- */
+@media (max-width: 600px) {
+  .fila-cupon {
+    flex-direction: column;
+  }
+
+  .fila-cupon button {
+    width: 100%;
+  }
+}

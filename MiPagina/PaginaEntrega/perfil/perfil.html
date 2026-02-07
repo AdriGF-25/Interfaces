@@ -38,36 +38,95 @@
 </header>
 
     <main class="perfil">
-      <!-- --------------------FILA 1--------------------- -->
-      <section class="fila fila-perfil-form">
-        <form class="formulario">
-          <h2>Datos personales</h2>
+      <section class="perfil-grid">
 
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required />
+        <!-- --------- COLUMNA IZQUIERDA ---------- -->
+        <div class="perfil-contenido">
 
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" required />
+          <!-- FORMULARIO PERFIL -->
+          <section class="fila-perfil-form">
+            <form class="formulario">
+              <h2>Datos personales</h2>
 
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" required />
+              <label>Nombre</label>
+              <input type="text" placeholder="Adrián" />
 
-          <label for="pais">País</label>
-          <select id="pais" name="pais">
-            <option value="es">España</option>
-            <option value="mx">México</option>
-            <option value="ar">Argentina</option>
-          </select>
+              <label>Contraseña</label>
+              <input type="password" />
 
-          <button type="submit">Guardar cambios</button>
-        </form>
+              <label>Correo electrónico</label>
+              <input type="email" placeholder="adriangomezferreiro@gmail.com" />
 
-        <div class="perfil-foto">
-          <img src="../imagenes/perfil-foto.jpg" alt="Foto de perfil" />
-          <p>Actualiza tu información para disfrutar de una experiencia más personalizada.</p>
+              <label>País</label>
+              <select>
+                <option>España</option>
+                <option>Alemania</option>
+                <option>Suiza</option>
+              </select>
+
+              <button type="submit">Guardar cambios</button>
+            </form>
+
+            <div class="perfil-foto">
+              <img src="../imagenes/1f464-removebg-preview.png" alt="Foto de perfil">
+              <p>Actualiza tu información para disfrutar de una experiencia más personalizada.</p>
+              <a href="#" class="btn-personalizar">Personalizar ajustes</a>
+            </div>
+          </section>
+
+          <!-- ---------- RESUMENES ---------- -->
+          <section class="perfil-resumenes">
+            <h3>Resumen de compra</h3>
+
+            <div class="resumen-card">
+              <img src="../imagenes/e8d4b0903356f8eb0d47231cef261217-removebg-preview.png" alt="Sony Alpha 7">
+              <div>
+                <p>Sony Alpha 7</p>
+                <span>Coste: 1.199 €</span>
+                <div class="estrellas">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="resumen-card">
+              <img src="../imagenes/Canon_EOS_R-removebg-preview.png" alt="Canon EOS R">
+              <div>
+                <p>Canon EOS R</p>
+                <span>Coste: 1.499 €</span>
+                <div class="estrellas">★★★★★</div>
+              </div>
+            </div>
+
+            <div class="resumen-card">
+              <img src="../imagenes/4515C005_RF-50mm-F1-removebg-preview.png" alt="Canon RF 50mm">
+              <div>
+                <p>Canon RF 50mm f/1.8</p>
+                <span>Coste: 229 €</span>
+                <div class="estrellas">★★★★★</div>
+              </div>
+            </div>
+
+          </section>
+
         </div>
+
+        <!-- ===== COLUMNA DERECHA ===== -->
+        <aside class="perfil-lateral">
+          <div class="usuario-box">
+            <div class="avatar">A</div>
+            <h4>Adrián</h4>
+            <p>adriangomezferreiro@gmail.com</p>
+            <a href="#">Editar información</a>
+          </div>
+
+          <div class="usuario-links">
+            <a href="#">Direcciones</a>
+            <a href="#">Conexión & seguridad</a>
+          </div>
+        </aside>
+
       </section>
     </main>
+
 
     <!-- --------------------FOOTER--------------------- -->
     <footer>
