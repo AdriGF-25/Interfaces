@@ -19,6 +19,7 @@ header {
   justify-content: center;
   background-color: #fff;
   padding: 20px 0;
+  width: 100%;
 }
 
 /* ==============================
@@ -31,9 +32,10 @@ nav {
   gap: 1rem;
   padding: 10px 20px;
   border-radius: 100px;
-  background-color: rgb(246, 209, 214); /* fondo rosa */
+  background-color: rgb(246, 209, 214);
   width: 80%;
   max-width: 1200px;
+  position: relative;
   z-index: 999;
 }
 
@@ -126,9 +128,11 @@ ul.menu li > a.activo:hover {
 
 .boton-hamburguesa {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   user-select: none;
+  z-index: 1000;
+  color: black;
 }
 
 .menu-movil {
