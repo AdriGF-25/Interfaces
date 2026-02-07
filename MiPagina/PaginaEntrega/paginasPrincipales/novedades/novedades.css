@@ -56,7 +56,6 @@ body {
   padding: 40px;
 }
 
-/* Contenedor que oculta lo que se sale por los lados */
 .carousel-container {
   position: relative;
   margin: 0;
@@ -66,7 +65,7 @@ body {
 .carousel-track {
   display: flex;
   gap: 20px;
-  animation: carouselInfinito 60s linear infinite;
+  animation: carouselInfinito 30s linear infinite;
   transition: 0.3s ease;
 }
 .carousel-slide {
@@ -102,6 +101,67 @@ body {
   color: white;
 }
 
+
+/*------------------ hovers------------------*/
+
+.carousel-track:hover .carousel-slide {
+    transform: translateY(10px) scale(0.9);
+    opacity: 0.7;
+}
+
+.carousel-track:hover .carousel-slide:hover {
+    transform: translateY(-15px) scale(1.05);
+    opacity: 1;
+    z-index: 10;
+}
+
+/* -----------------------fila 3------------------------ */
+
+.fila:nth-child(3){
+    position: relative;
+    background-color: #030013;
+    padding: 50px;
+}
+
+/*----------------- animaciones ----------------- */
+
+.fila:nth-child(1) #imgInicio-div {
+  animation: entradaDestacado1 1.2s ease-out forwards;
+}
+
+@keyframes entradaDestacado1 {
+  0% {
+      opacity: 0;
+      transform: translate(30px, 60px) scale(0.85) rotate(-12deg);
+  }
+  60% {
+      opacity: 1;
+      transform: translate(-8px, -8px) scale(1.03) rotate(-3deg);
+  }
+  100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+
+.fila:nth-child(3) #imgInicio-div {
+  animation: entradaDestacado2 1.2s ease-out  forwards;
+}
+
+@keyframes entradaDestacado2 {
+  0% {
+      opacity: 0;
+      transform: translate(-30px, -60px) scale(0.85) rotate(10deg);
+  }
+  60% {
+      opacity: 1;
+      transform: translate(6px, 6px) scale(1.02) rotate(2deg);
+  }
+  100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
 @keyframes carouselInfinito {
   0% {
     transform: translateX(0);
@@ -111,22 +171,77 @@ body {
   }
 }
 
-/* hovers */
-.carousel-track:hover .carousel-slide {
-  transform: translateY(10px) scale(0.9);
-  opacity: 0.7;
+/*----------------- RESPONSIVE ----------------- */
+/* ---- pantallas grandes----------*/
+@media (max-width: 1400px) {
+    .carousel-slide {
+        flex: 0 0 40%;
+    }
 }
 
-.carousel-track:hover .carousel-slide:hover {
-  transform: translateY(-10px) scale(1);
-  opacity: 1;
-  z-index: 10;
+/* ---- tablet ---- */
+@media (max-width: 900px) {
+    .fila {
+        padding: 40px 20px;
+    }
+
+    #imgInicio-div {
+        aspect-ratio: 16/10;
+    }
+
+    #imgInicio-div .title,
+    #imgInicio-div .description {
+        max-width: 80%;
+        left: 20px;
+        right: 20px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 50%;
+    }
+
+    .carousel-slide img {
+        height: 220px;
+    }
 }
 
-/* -----------------------fila 3------------------------ */
+/* ---- móvil ---- */
+@media (max-width: 480px) {
+    .fila {
+        padding: 30px 15px;
+    }
 
-.fila:nth-child(3){
-    position: relative;
-    background-color: #030013;
-    padding: 50px;
+    #imgInicio-div {
+        border-radius: 18px;
+        box-shadow: 0 18px 50px rgba(0,0,0,0.7);
+    }
+
+    #imgInicio-div .title {
+        bottom: 20px;
+        padding: 14px;
+    }
+
+    #imgInicio-div .description {
+        bottom: auto;
+        top: 20px;
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+
+    .carousel-container {
+        border-radius: 20px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 70%;
+    }
+
+    .carousel-slide img {
+        height: 200px;
+    }
+
+    .carousel-slide .description {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
 }
