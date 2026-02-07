@@ -10,6 +10,12 @@ background-color: #030013;
 color: white;
 }
 
+ul.menu li > a.activo {
+  background-color: #F6D1D6;
+  color: black;
+}
+
+
 /* --------------------MAIN CARRITO--------------------- */
 .carrito {
 display: grid;

@@ -1,179 +1,184 @@
+/* ==============================
+   RESET Y BASE
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+/* ==============================
+   HEADER
+============================== */
 header {
-    display: flex;
-    padding: 50px;
-    background-color: rgb(255, 255, 255);
-    font-size: larger;
-    top: 0;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px 0;
 }
 
+/* ==============================
+   NAV
+============================== */
 nav {
-    display: grid;
-    z-index: 999;
-
-    grid-template-columns: repeat(3,1fr);
-    background-color: rgb(246, 209, 214);
-    align-items: center;
-
-    gap: 1rem;
-    padding: 10px 5px 10px 5px;
-    border-radius: 100px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: rgb(246, 209, 214); /* fondo rosa */
+  width: 80%;
+  max-width: 1200px;
+  z-index: 999;
 }
 
-.nav-buttons {
-    display: flex;
-    gap:5%;
-    justify-content:right;
-    margin-right: 20px;
-}
-
-.icono-boton {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    color: black;
-    position: relative;
-}
-.icono-boton:hover {
-    background-color: rgba(0,0,255,0.2);
-}
-
+/* LOGO */
 #logo img {
-    height: 80px;
+  height: 60px;
 }
 
-ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, auto); 
-    justify-content: center;
-    gap: 20px;
-    padding: 5px 0;
+/* ==============================
+   MENÚ ESCRITORIO
+============================== */
+ul.menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 20px;
 }
 
-li {
-    border-radius: 100px;
-    padding: 5px;
+ul.menu li > a {
+  color: black;
+  display: block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-li > a {
-    color: black;
-    display: block;
-    padding: 5px 15px;
-    text-decoration: none;
-    border-radius: 20px;
+ul.menu li > a:hover:not(.activo) {
+  background: linear-gradient(90deg, rgba(0,123,255,0.3), rgba(0,0,255,0.3));
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.activo {
-    background-color: blue;
-    color: white;
+ul.menu li > a.activo {
+  background-color: blue;
+  color: white;
 }
 
-li > a:hover:not(.activo) {
-    background-color: rgba(0, 0, 255, 0.2);
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    transform: translateY(-3px);
+ul.menu li > a.activo:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-li > a.activo:hover {
-    transform: translateY(-3px);
+/* ==============================
+   BOTONES DERECHA
+============================== */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
 }
 
-/* ------------------RESPONSIVE------------------ */
-
-/* Pantalla grande: hasta 1650px */
-@media (max-width: 1650px) {
-  #logo img {
-    height: 70px;
-  }
-
-  li > a {
-    padding: 5px 12px;
-  }
+.nav-buttons a {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  background-color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
-/* Pantalla media*/
-@media (max-width: 1350px) {
-  nav {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-    padding: 8px 5px;
-  }
-
-  #logo img {
-    height: 65px;
-  }
-
-  li > a {
-    padding: 5px 10px;
-    font-size: 0.95rem;
-  }
+.nav-buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  background-color: rgba(255,255,255,0.95);
 }
 
-/* Portátil */
-@media (max-width: 1120px) {
-  header {
-    padding: 30px 20px;
-  }
-
-  nav {
-    grid-template-columns: auto 1fr auto;
-    gap: 0.6rem;
-    padding: 6px 10px;
-  }
-
-  #logo img {
-    height: 60px;
-  }
-
-  li > a {
-    padding: 4px 10px;
-    font-size: 0.9rem;
-  }
-
-  .nav-buttons {
-    margin-right: 10px;
-    gap: 5%;
-  }
+.nav-buttons a img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none;
 }
 
-/* Tablet */
+.nav-buttons .activo {
+  background-color: lightblue;
+}
+
+/* ==============================
+   MENÚ MÓVIL
+============================== */
+.check-menu {
+  display: none;
+}
+
+.boton-hamburguesa {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-movil {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  right: 10%;
+  background-color: rgb(246, 209, 214);
+  padding: 15px 20px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 998;
+}
+
+.menu-movil a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.menu-movil a.activo {
+  background-color: blue;
+  color: white;
+}
+
+.menu-movil a:hover:not(.activo) {
+  background: rgba(0,0,255,0.3);
+  transform: translateX(4px);
+}
+
+/* Mostrar menú móvil cuando checkbox está activo */
+.check-menu:checked ~ .menu-movil {
+  display: flex;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
 @media (max-width: 820px) {
-  nav {
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-  }
-
-  ul {
-    display: none; /* ocultamos el menú para tablet/móvil, la idea es para hacer el menu hamburguesa */
-  }
-}
-
-/* Móvil */
-@media (max-width: 480px) {
-  header {
-    padding: 20px 10px;
-  }
-
-  #logo img {
-    height: 50px;
-  }
-
-  .nav-buttons {
-    gap: 8px;
+  ul.menu {
+    display: none;
   }
 
   .boton-hamburguesa {
-    width: 40px;
-    height: 40px;
-  }
-
-  li > a {
-    padding: 4px 8px;
-    font-size: 0.85rem;
+    display: block;
   }
 }

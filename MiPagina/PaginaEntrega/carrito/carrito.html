@@ -12,31 +12,42 @@
   </head>
   <body>
     <!-- --------------------HEADER--------------------- -->
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav">
         <div id="logo">
           <a href="../paginasPrincipales/novedades/novedades.html">
             <img src="../imagenes/Logo_PhotoLens.png" alt="Logo PhotoLens" />
           </a>
         </div>
-
+    
+        <!-- ------------------ MENU ESCRITORIO ------------------ -->
         <ul class="menu">
           <li><a href="../paginasPrincipales/novedades/novedades.html">Novedades</a></li>
           <li><a href="../paginasPrincipales/mercado/mercado.html">Mercado</a></li>
           <li><a href="../paginasPrincipales/foros/foros.html">Foros</a></li>
-      </ul>
-
+        </ul>
+    
+        <!-- ------------------ BOTONES DERECHA ------------------ -->
         <div class="nav-buttons">
-          <a href="../carrito/carrito.html" class="icono-boton activo">
-            <span class="badge">3</span>
-            🛒
+          <a href="carrito.html" class="icono-boton activo">
+            <img src="../imagenes/carrito.png" alt="Carrito" >
           </a>
           <a href="../perfil/perfil.html" class="icono-boton">
-            👤
+            <img src="../imagenes/perfil.png" alt="Perfil">
           </a>
         </div>
-      </nav>
+    
+      <!-- ------------------ MENU MOVIL ------------------ -->
+      <div class="menu-movil">
+        <a href="novedades.html" class="activo">Novedades</a>
+        <a href="mercado.html">Mercado</a>
+        <a href="foros.html">Foros</a>
+      </div>
+    
+  
+      <label for="botonMenu" class="overlay-menu"></label>
     </header>
+    
 
     <main class="carrito">
       <!-- --------------------FILA 1--------------------- -->
