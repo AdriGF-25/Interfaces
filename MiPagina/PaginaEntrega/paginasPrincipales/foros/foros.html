@@ -1,137 +1,147 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foros - PhotoLens</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foros</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/header.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
-    <link rel="stylesheet" href="../../paginasPrincipales/foros/foros.css" />
-  </head>
-  <body>
-    <!-- --------------------HEADER--------------------- -->
-    <header>
-      <nav>
-        <div id="logo">
-          <a href="../novedades/novedades.html">
-            <img src="../../imagenes/Logo_PhotoLens.png" alt="Logo PhotoLens" />
-          </a>
-        </div>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <link rel="stylesheet" href="../../css/footer.css" />
+  <link rel="stylesheet" href="../../paginasPrincipales/foros/foros.css" />
+</head>
 
-        <ul class="menu">
-          <li><a href="../novedades/novedades.html">Novedades</a></li>
-          <li><a href="../mercado/mercado.html">Mercado</a></li>
-          <li><a href="../foros/foros.html" class="activo">Foros</a></li>
+<body>
+
+  <!-- --------------------HEADER--------------------- -->
+  <header>
+    <nav>
+      <div id="logo">
+        <a href="../novedades/novedades.html">
+          <img src="../../imagenes/Logo_PhotoLens.png" alt="Logo PhotoLens" />
+        </a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="../novedades/novedades.html">Novedades</a></li>
+        <li><a href="../mercado/mercado.html">Mercado</a></li>
+        <li><a href="../foros/foros.html" class="activo">Foros</a></li>
       </ul>
 
       <div class="nav-buttons">
-          <a href="../../carrito/carrito.html" class="icono-boton">
-              🛒<span class="badge"></span>
-          </a>
-          <a href="../../perfil/perfil.html" class="icono-boton">
-              👤
-          </a>
+        <a href="../../carrito/carrito.html" class="icono-boton">
+          🛒<span class="badge"></span>
+        </a>
+        <a href="../../perfil/perfil.html" class="icono-boton">
+          👤
+        </a>
       </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-    <main class="foros">
-      <!-- --------------------FILA 1--------------------- -->
-      <section class="fila fila-foros-hero">
-        <div class="hero-contenido">
+  <!-- --------------------MAIN--------------------- -->
+  <main class="contenedor-foros">
+
+    <!-- BUSCADOR -->
+    <div class="buscador">
+      <input type="text" placeholder="Buscar en foros...">
+      <button type="button" class="btn-buscar">Buscar</button>
+    </div>
+
+    <!-- FILA 1 HERO -->
+    <section class="fila fila-hero">
+      <div class="hero-fondo">
+        <img src="../../imagenes/stock-photo-hands-holding-community-word.webp" alt="Comunidad">
+        <div class="hero-texto">
           <h1>Descubre</h1>
-          <p>Comparte experiencias, consejos y novedades sobre fotografía con la comunidad.</p>
-          <button>Crear nueva publicación</button>
+          <p>Comparte con la comunidad</p>
+          <button class="btn-pub">Nueva publicación</button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- --------------------FILA 2--------------------- -->
-      <section class="fila fila-foros-publicaciones">
-        <div class="titulo-bloque">
-          <h2>Publicaciones recientes</h2>
-          <a href="#">Ver todo</a>
-        </div>
+    <!-- FILA 2 PUBLICACIONES -->
+    <section class="fila fila-pub">
+      <div class="titulo-bloque">
+        <h2>Publicaciones recientes</h2>
+        <a href="#">Ver todo</a>
+      </div>
 
-        <div class="grid-publicaciones">
-          <article class="publicacion">
-            <h3>Configuración para fotografía nocturna</h3>
-            <p>¿Qué ajustes usáis para conseguir cielos limpios sin demasiado ruido?</p>
-            <span>Foro: Técnicas y consejos</span>
-          </article>
+      <div class="grid-pub">
+        <article class="publicacion">
+          <h3>Fotografía nocturna</h3>
+          <p>Ajustes para cielos limpios</p>
+          <span>Técnica</span>
+        </article>
 
-          <article class="publicacion">
-            <h3>Recomendación de objetivos para retrato</h3>
-            <p>Busco un objetivo luminoso para cámaras full-frame sin gastar demasiado.</p>
-            <span>Foro: General</span>
-          </article>
+        <article class="publicacion">
+          <h3>Objetivos retrato</h3>
+          <p>Luminoso full-frame económico</p>
+          <span>General</span>
+        </article>
 
-          <article class="publicacion">
-            <h3>Compartamos nuestra primera foto analógica</h3>
-            <p>Sube tu primera foto en película y comenta el proceso.</p>
-            <span>Foro: General</span>
-          </article>
-        </div>
-      </section>
+        <article class="publicacion">
+          <h3>Primera foto analógica</h3>
+          <p>Sube tu primera película</p>
+          <span>General</span>
+        </article>
+      </div>
+    </section>
 
-      <!-- --------------------FILA 3--------------------- -->
-      <section class="fila fila-foros-categorias">
-        <h2>Categorías del foro</h2>
+    <!-- FILA 3 CATEGORÍAS -->
+    <section class="fila fila-cat">
+      <h2>Categorías foro</h2>
 
-        <div class="grid-categorias">
-          <article class="categoria">
-            <h3>General</h3>
-            <p>Noticias, dudas rápidas y conversaciones sobre fotografía en general.</p>
-          </article>
+      <div class="grid-cat">
+        <article class="categoria">
+          <img src="../../imagenes/tecnicas-composicion-fotografica-inmofotos-zaragoza-movimiento-17-trafico-de-noche-luces-de-trafico.webp" alt="Técnica">
+          <h3>Técnica consejos</h3>
+          <p>Iluminación composición</p>
+        </article>
 
-          <article class="categoria">
-            <h3>Técnicas y consejos</h3>
-            <p>Iluminación, composición, equipo y flujo de trabajo.</p>
-          </article>
+        <article class="categoria">
+          <img src="../../imagenes/whereslugo-C2-qz9YP54k-unsplash-1-768x432.webp" alt="Equipo">
+          <h3>Equipo mercado</h3>
+          <p>Cámaras objetivos</p>
+        </article>
 
-          <article class="categoria">
-            <h3>Equipo y mercado</h3>
-            <p>Comparativas, opiniones y experiencias de compra.</p>
-          </article>
-        </div>
-      </section>
-    </main>
+        <article class="categoria">
+          <img src="../../imagenes/fi002329-1587980243.webp" alt="Analógica">
+          <h3>Analógica vintage</h3>
+          <p>Película clásicas</p>
+        </article>
+      </div>
+    </section>
 
-    <!-- --------------------FOOTER--------------------- -->
-    <footer>
-      <div class="fcontenido">
+  </main>
+
+  <!-- --------------------FOOTER--------------------- -->
+  <footer>
+    <div class="fcontenido">
         <div class="finfo">
-          <h3>Contáctenos</h3>
-          <p>Contacte con nosotros</p>
-          <p>
-            <a href="mailto:adriangomezferreiro@gmail.com">adriangomezferreiro@gmail.com</a>
-          </p>
-          <p>
-            <a href="tel:+34633949090">+34 633 94 90 90</a>
-          </p>
+            <h3>Contáctenos</h3>
+            <p>Contáctenos</p>
+            <p><a href="mailto:adriangomezferreiro@gmail.com">adriangomezferreiro@gmail.com</a></p>
+            <p><a href="tel:+34633949090">+34 633 94 90 90</a></p>
         </div>
 
         <div class="fsobre">
-          <h3>PhotoLens</h3>
-          <p>Tienda especializada en fotografía profesional.</p>
-          <p>Líder en objetivos y accesorios en Galicia.</p>
+            <h3>📷 PhotoLens</h3>
+            <p>Tienda especializada en fotografía profesional.</p>
+            <p>Líder en objetivos y accesorios en Galicia.</p>
         </div>
 
         <div class="fredes">
-          <a class="icono" href="https://facebook.com" target="_blank">f</a>
-          <a class="icono" href="https://x.com" target="_blank">x</a>
-          <a class="icono" href="https://instagram.com" target="_blank">i</a>
+            <a class="icono" href="https://facebook.com" target="_blank">f</a>
+            <a class="icono" href="https://x.com" target="_blank">x</a>
+            <a class="icono" href="https://instagram.com" target="_blank">📸</a>
         </div>
-      </div>
+    </div>
 
-      <div class="copy">
-        <p class="CC">
-          PhotoLens 2025 ·
-          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0">CC BY-NC-ND 4.0</a>
-        </p>
-      </div>
-    </footer>
-  </body>
+    <div class="CC">
+        <p>PhotoLens © 2025 <br><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
+    </div>
+</footer>
+
+</body>
 </html>
