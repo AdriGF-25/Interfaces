@@ -1,13 +1,13 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: Montserrat, sans-serif;
-background-color: #030013;
-color: white;
+  font-family: Montserrat, sans-serif;
+  background-color: #030013;
+  color: white;
 }
 
 ul.menu li > a.activo {
@@ -15,274 +15,149 @@ ul.menu li > a.activo {
   color: black;
 }
 
-
 /* --------------------MAIN CARRITO--------------------- */
+/* BASE = MÓVIL (0px a 479px) */
 .carrito {
-display: grid;
-grid-template-rows: auto auto;
-gap: 30px;
-padding: 140px 40px 40px;
-
-/* para que el footer no se vea al entrar */
-min-height: 110vh;
-
-animation: fadeIn 0.7s ease forwards;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 22px;
+  padding: 120px 15px 25px;
+  
+  animation: fadeIn 0.7s ease forwards;
 }
 
 /* ------------- Animación -------------*/
 @keyframes fadeIn {
-from {
-  opacity: 0;
-  transform: translateY(12px);
-}
-to {
-  opacity: 1;
-  transform: translateY(0);
-}
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --------------------FILA 1--------------------- */
 .fila-carrito-titulo {
-text-align: center;
-animation: slideUp 0.7s ease forwards;
+  text-align: center;
+  animation: slideUp 0.7s ease forwards;
 }
 
 @keyframes slideUp {
-from {
-  opacity: 0;
-  transform: translateY(18px);
-}
-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-}
-
-.fila-carrito-titulo h1 {
-font-size: 2.2rem;
-margin-bottom: 10px;
-font-weight: 600;
-letter-spacing: 0.5px;
-}
-
-.fila-carrito-titulo p {
-opacity: 0.85;
-font-size: 1rem;
-}
-
-/* --------------------FILA 2 (TABLA)--------------------- */
-.fila-carrito-tabla {
-background: linear-gradient(180deg, #17029f 0%, #0f0075 100%);
-border-radius: 22px;
-padding: 25px;
-display: grid;
-gap: 15px;
-
-box-shadow: 0 0 30px rgba(23, 2, 159, 0.35);
-border: 1px solid rgba(255, 255, 255, 0.08);
-
-animation: fadeIn 0.8s ease forwards;
-}
-
-/* --------------------CABECERA--------------------- */
-.cabecera {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr;
-font-weight: 600;
-opacity: 0.9;
-padding: 10px 10px 12px;
-border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.cabecera span {
-font-size: 0.9rem;
-}
-
-/* --------------------LINEA PRODUCTO--------------------- */
-.linea-producto {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr;
-align-items: center;
-gap: 10px;
-
-background-color: rgba(3, 0, 19, 0.55);
-border-radius: 14px;
-padding: 14px 12px;
-
-border: 1px solid rgba(255, 255, 255, 0.08);
-
-transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.linea-producto:hover {
-transform: translateY(-3px);
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-/* --------------------INFO PRODUCTO--------------------- */
-.producto-info {
-display: flex;
-gap: 12px;
-align-items: center;
-}
-
-.producto-info img {
-width: 75px;
-height: 75px;
-object-fit: cover;
-border-radius: 10px;
-
-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-}
-
-.producto-info h2 {
-font-size: 1.05rem;
-font-weight: 600;
-}
-
-.producto-info p {
-opacity: 0.75;
-font-size: 0.9rem;
-margin-top: 4px;
-}
-
-/* --------------------INPUT CANTIDAD--------------------- */
-.linea-producto input[type="number"] {
-width: 70px;
-padding: 7px 8px;
-border-radius: 10px;
-border: 1px solid rgba(255, 255, 255, 0.15);
-background-color: rgba(255, 255, 255, 0.08);
-color: white;
-font-family: inherit;
-font-size: 0.95rem;
-outline: none;
-transition: border 0.25s ease, background 0.25s ease;
-}
-
-.linea-producto input[type="number"]:focus {
-border: 1px solid rgba(255, 255, 255, 0.35);
-background-color: rgba(255, 255, 255, 0.12);
-}
-
-/* --------------------PRECIOS--------------------- */
-.linea-producto span {
-font-size: 0.95rem;
-opacity: 0.95;
-}
-
-/* --------------------RESUMEN--------------------- */
-.resumen {
-margin-top: 10px;
-background-color: rgba(3, 0, 19, 0.75);
-border-radius: 14px;
-padding: 18px;
-display: grid;
-gap: 10px;
-
-border: 1px solid rgba(255, 255, 255, 0.1);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.fila-resumen {
-display: flex;
-justify-content: space-between;
-font-size: 0.95rem;
-opacity: 0.9;
-}
-
-.fila-resumen.total {
-font-weight: 600;
-opacity: 1;
-font-size: 1.05rem;
-margin-top: 4px;
-}
-
-/* --------------------BOTÓN CHECKOUT--------------------- */
-.resumen button {
-margin-top: 10px;
-padding: 12px 18px;
-border-radius: 999px;
-border: none;
-cursor: pointer;
-background-color: white;
-color: black;
-font-family: inherit;
-font-weight: 600;
-font-size: 1rem;
-
-transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.resumen button:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
-}
-
-.resumen button:active {
-transform: translateY(0);
-}
-
-/* ---------------RESPONSIVE--------------- */
-
-@media (max-width: 900px) {
-.carrito {
-  padding: 130px 20px 30px;
-}
-
-.fila-carrito-titulo h1 {
-  font-size: 2rem;
-}
-
-.fila-carrito-tabla {
-  padding: 20px;
-}
-
-.cabecera {
-  grid-template-columns: 2fr 0.8fr 1fr 1fr;
-}
-
-.linea-producto {
-  grid-template-columns: 2fr 0.8fr 1fr 1fr;
-}
-
-.producto-info img {
-  width: 65px;
-  height: 65px;
-}
-}
-
-@media (max-width: 600px) {
-.carrito {
-  padding: 120px 15px 25px;
-  gap: 22px;
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fila-carrito-titulo h1 {
   font-size: 1.7rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .fila-carrito-titulo p {
+  opacity: 0.85;
   font-size: 0.95rem;
 }
 
+/* --------------------FILA 2 (TABLA)--------------------- */
+.fila-carrito-tabla {
+  background: linear-gradient(180deg, #17029f 0%, #0f0075 100%);
+  border-radius: 22px;
+  padding: 16px;
+  display: grid;
+  gap: 15px;
+
+  box-shadow: 0 0 30px rgba(23, 2, 159, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* --------------------CABECERA--------------------- */
+/* En móvil la ocultamos */
 .cabecera {
   display: none;
 }
 
+/* --------------------LINEA PRODUCTO--------------------- */
 .linea-producto {
+  display: grid;
   grid-template-columns: 1fr;
+  align-items: center;
   gap: 12px;
+
+  background-color: rgba(3, 0, 19, 0.55);
+  border-radius: 14px;
   padding: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.linea-producto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------INFO PRODUCTO--------------------- */
 .producto-info {
+  display: flex;
   gap: 12px;
+  align-items: center;
 }
 
 .producto-info img {
   width: 70px;
   height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+.producto-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.producto-info p {
+  opacity: 0.75;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* --------------------INPUT CANTIDAD--------------------- */
+.linea-producto input[type="number"] {
+  width: 100%;
+  padding: 7px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.25s ease, background 0.25s ease;
+}
+
+.linea-producto input[type="number"]:focus {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------PRECIOS--------------------- */
+.linea-producto span {
+  font-size: 0.95rem;
+  opacity: 0.95;
 }
 
 .linea-producto span:nth-of-type(1)::before {
@@ -297,41 +172,64 @@ transform: translateY(0);
   margin-right: 6px;
 }
 
-.linea-producto input[type="number"] {
-  width: 100%;
-}
-
+/* --------------------RESUMEN--------------------- */
 .resumen {
+  margin-top: 10px;
+  background-color: rgba(3, 0, 19, 0.75);
+  border-radius: 14px;
   padding: 16px;
-}
+  display: grid;
+  gap: 10px;
 
-.resumen button {
-  width: 100%;
-}
-}
-
-@media (max-width: 420px) {
-.fila-carrito-tabla {
-  padding: 16px;
-}
-
-.producto-info h2 {
-  font-size: 1rem;
-}
-
-.producto-info p {
-  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .fila-resumen {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.9rem;
-}
+  opacity: 0.9;
 }
 
+.fila-resumen.total {
+  font-weight: 600;
+  opacity: 1;
+  font-size: 1.05rem;
+  margin-top: 4px;
+}
+
+/* --------------------BOTÓN CHECKOUT--------------------- */
+.resumen button {
+  margin-top: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+
+  width: 100%;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resumen button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.resumen button:active {
+  transform: translateY(0);
+}
 
 /* --------------------CUPÓN--------------------- */
 .fila-cupon {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-top: 15px;
 }
@@ -363,6 +261,7 @@ transform: translateY(0);
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.25s ease;
+  width: 100%;
 }
 
 .fila-cupon button:hover {
@@ -416,13 +315,131 @@ transform: translateY(0);
   transform: translateY(-2px);
 }
 
-/* --------------------RESPONSIVE CUPÓN y OR--------------------- */
-@media (max-width: 600px) {
+/* ===================================================== */
+/* ================== BREAKPOINTS ====================== */
+/* ===================================================== */
+
+/* -------------------- ≥ 480px --------------------- */
+@media (min-width: 480px) {
+  .carrito {
+    padding: 120px 20px 30px;
+    gap: 30px;
+  }
+
+  .fila-carrito-titulo h1 {
+    font-size: 2rem;
+  }
+
+  .fila-carrito-titulo p {
+    font-size: 1rem;
+  }
+
+  .fila-carrito-tabla {
+    padding: 20px;
+  }
+
+  .producto-info img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .producto-info h2 {
+    font-size: 1.05rem;
+  }
+
+  .producto-info p {
+    font-size: 0.9rem;
+  }
+
+  .fila-resumen {
+    font-size: 0.95rem;
+  }
+
+  /* Cupón ya puede ir en fila */
   .fila-cupon {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .fila-cupon button {
-    width: 100%;
+    width: auto;
+  }
+
+  .resumen button {
+    width: auto;
+  }
+}
+
+/* -------------------- ≥ 750px --------------------- */
+@media (min-width: 750px) {
+  .carrito {
+    padding: 130px 20px 30px;
+  }
+
+  /* vuelve la cabecera */
+  .cabecera {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 1fr 1fr;
+    font-weight: 600;
+    opacity: 0.9;
+    padding: 10px 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .cabecera span {
+    font-size: 0.9rem;
+  }
+
+  .linea-producto {
+    grid-template-columns: 2fr 0.8fr 1fr 1fr;
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  /* Quitamos los textos "Precio:" y "Total:" */
+  .linea-producto span:nth-of-type(1)::before,
+  .linea-producto span:nth-of-type(2)::before {
+    content: "";
+    margin-right: 0;
+  }
+
+  .linea-producto input[type="number"] {
+    width: 70px;
+  }
+
+  .producto-info img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .resumen button {
+    width: auto;
+  }
+}
+
+/* -------------------- ≥ 1000px --------------------- */
+@media (min-width: 1000px) {
+  .carrito {
+    padding: 140px 40px 40px;
+  }
+
+  .fila-carrito-titulo h1 {
+    font-size: 2.2rem;
+  }
+
+  .fila-carrito-tabla {
+    padding: 25px;
+  }
+
+  .cabecera {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  .linea-producto {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  .producto-info img {
+    width: 75px;
+    height: 75px;
   }
 }

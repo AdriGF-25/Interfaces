@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+/* Sticky footer bien hecho */
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   background-color: #030013;
   color: white;
 
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -17,13 +22,13 @@ body {
 /*====================================
 =                MAIN                =
 ====================================*/
+/* BASE = MÓVIL (0px - 479px) */
 .perfil {
   flex: 1;
-  height: 100vh;
 
   display: grid;
   grid-template-rows: auto;
-  padding: 40px 40px 40px;
+  padding: 110px 15px 30px;
 
   opacity: 0;
   animation: fadeIn 0.7s ease forwards;
@@ -34,13 +39,13 @@ body {
 ====================================*/
 .perfil-grid {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 25px;
 }
 
 .perfil-contenido {
   display: grid;
-  gap: 30px;
+  gap: 25px;
 }
 
 /*====================================
@@ -48,12 +53,12 @@ body {
 ====================================*/
 .fila-perfil-form {
   background-color: #17029f;
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 16px;
+  padding: 18px;
 
   display: grid;
-  grid-template-columns: 2fr 1.2fr;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 18px;
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 
@@ -74,7 +79,7 @@ body {
 
 .formulario h2 {
   margin-bottom: 10px;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
 }
 
 .formulario label {
@@ -97,13 +102,11 @@ body {
   transition: 0.25s ease;
 }
 
-/* Hover inputs */
 .formulario input:hover,
 .formulario select:hover {
   background-color: rgba(3, 0, 19, 0.75);
 }
 
-/* Focus inputs */
 .formulario input:focus,
 .formulario select:focus {
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -125,6 +128,7 @@ body {
   font-family: inherit;
 
   transition: 0.25s ease;
+  width: 100%;
 }
 
 .formulario button:hover {
@@ -154,10 +158,10 @@ body {
 }
 
 .perfil-foto img {
-  width: 240px;
-  height: 240px;
+  width: 175px;
+  height: 175px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 16px;
   background-color: white;
 
   border: 2px solid rgba(0, 0, 0, 0.55);
@@ -192,6 +196,8 @@ body {
   font-size: 0.95rem;
 
   transition: 0.25s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .btn-personalizar:hover {
@@ -209,14 +215,17 @@ body {
 ====================================*/
 .perfil-lateral {
   background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  padding: 25px;
+  border-radius: 16px;
+  padding: 20px;
   height: fit-content;
 
   display: grid;
-  gap: 25px;
+  gap: 20px;
 
   animation: slideInRight 0.8s ease forwards;
+
+  /* En móvil va arriba */
+  order: -1;
 }
 
 /* Usuario */
@@ -313,6 +322,9 @@ body {
   width: 100%;
   border-radius: 12px;
 }
+.resumen-card img:nth-child(1) {
+  transform: scale(1.15) !important;
+}
 
 .resumen-card p {
   font-weight: 600;
@@ -359,42 +371,14 @@ body {
   }
 }
 
-/*====================================
-=             RESPONSIVE             =
-====================================*/
-@media (max-width: 1024px) {
-  .perfil {
-    padding: 125px 25px 40px;
-    padding-bottom: 110px;
-  }
+/* ===================================================== */
+/* ================== BREAKPOINTS ====================== */
+/* ===================================================== */
 
-  .perfil-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .perfil-lateral {
-    order: -1;
-  }
-
-  .fila-perfil-form {
-    grid-template-columns: 1fr;
-    padding: 25px;
-  }
-
-  .perfil-foto {
-    order: -1;
-  }
-
-  .perfil-foto img {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-@media (max-width: 768px) {
+/* -------------------- ≥ 480px --------------------- */
+@media (min-width: 480px) {
   .perfil {
     padding: 115px 20px 35px;
-    padding-bottom: 100px;
   }
 
   .fila-perfil-form {
@@ -410,33 +394,61 @@ body {
   .perfil-foto img {
     width: 200px;
     height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .perfil {
-    padding: 110px 15px 30px;
-    padding-bottom: 90px;
-  }
-
-  .fila-perfil-form {
-    padding: 18px;
-    border-radius: 16px;
-    gap: 18px;
-  }
-
-  .formulario h2 {
-    font-size: 1.25rem;
-  }
-
-  .perfil-foto img {
-    width: 175px;
-    height: 175px;
-    border-radius: 16px;
+    border-radius: 18px;
   }
 
   .formulario button,
   .btn-personalizar {
-    width: 100%;
+    width: auto;
+  }
+}
+
+/* -------------------- ≥ 750px --------------------- */
+@media (min-width: 750px) {
+  .perfil {
+    padding: 125px 25px 40px;
+  }
+
+  .perfil-lateral {
+    order: 0;
+  }
+
+  .perfil-foto img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* -------------------- ≥ 1000px --------------------- */
+@media (min-width: 1000px) {
+  .perfil {
+    padding: 40px 40px 40px;
+  }
+
+  .perfil-grid {
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+  }
+
+  .fila-perfil-form {
+    grid-template-columns: 2fr 1.2fr;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .perfil-lateral {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .perfil-foto img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+  }
+
+  .formulario h2 {
+    font-size: 1.6rem;
   }
 }
