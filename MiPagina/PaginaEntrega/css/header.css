@@ -1,15 +1,16 @@
 header {
     display: flex;
-    padding: 20px 20px 120px 20px;
+    padding: 50px;
     background-color: rgb(255, 255, 255);
     font-size: larger;
     top: 0;
     justify-content: center;
+    z-index: 1;
+    position: relative;
 }
 
 nav {
     display: grid;
-    position: fixed;
     z-index: 999;
 
     grid-template-columns: repeat(3,1fr);
@@ -17,7 +18,6 @@ nav {
     align-items: center;
 
     gap: 1rem;
-    margin: 0 20px;
     padding: 10px 5px 10px 5px;
     border-radius: 100px;
 }

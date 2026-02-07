@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../paginasPrincipales/mercado/mercado.css" />
   </head>
   <body>
-    <!-- -----------------HEADER----------------- -->
+    <!-- ------------------ HEADER ------------------ -->
     <header>
       <nav>
         <div id="logo">
@@ -22,128 +22,165 @@
         </div>
 
         <ul class="menu">
-          <li><a href="../novedades/novedades.html" >Novedades</a></li>
+          <li><a href="../novedades/novedades.html">Novedades</a></li>
           <li><a href="../mercado/mercado.html" class="activo">Mercado</a></li>
           <li><a href="../foros/foros.html">Foros</a></li>
-      </ul>
+        </ul>
 
-      <div class="nav-buttons">
+        <div class="nav-buttons">
           <a href="../../carrito/carrito.html" class="icono-boton">
-              🛒<span class="badge"></span>
+            🛒<span class="badge"></span>
           </a>
-          <a href="../../perfil/perfil.html" class="icono-boton">
-              👤
-          </a>
-      </div>
-  </nav>
-</header>
+          <a href="../../perfil/perfil.html" class="icono-boton"> 👤 </a>
+        </div>
+      </nav>
+    </header>
 
-    <div class="mercado">
-      <!---------------- FILA 1: título ----------------->
+    <main class="mercado">
+      <!-- ------------------ TITULO ------------------ -->
       <section class="fila fila-mercado-titulo">
         <h1>Mercado</h1>
-        <p>Encuentra cámaras, objetivos y accesorios seleccionados para fotografía profesional.</p>
+        <p>
+          Equipos seleccionados para fotografía real: cámaras, objetivos y accesorios listos para disparar.
+        </p>
       </section>
 
-      <!-----------FILA 2: grid de productos--------------->
-      <section class="fila fila-mercado-grid">
-        <article class="producto">
-          <img src="../../imagenes/e8d4b0903356f8eb0d47231cef261217-removebg-preview.png" alt="Sony Alpha 7"/>
-          <h2>Sony Alpha 7</h2>
-          <p class="precio">1.199 €</p>
-          <p class="detalle">Cámara full-frame ideal para estudio y paisaje.</p>
-          <button>Añadir al carrito</button>
-        </article>
+      <!-- ------------------ FILTRO ------------------ -->
+      <input type="checkbox" id="buttonInputFiltro" />
 
-        <article class="producto">
-          <img src="../../imagenes/Canon_EOS_R-removebg-preview.png" alt="Canon EOS R" />
-          <h2>Canon EOS R</h2>
-          <p class="precio">1.499 €</p>
-          <p class="detalle">Sistema mirrorless con excelente enfoque automático.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        <article class="producto">
-          <img src="../../imagenes/z6ii-front-removebg-preview.png" alt="Nikon Z6 II"/>
-          <h2>Nikon Z6 II</h2>
-          <p class="precio">1.699 €</p>
-          <p class="detalle">Mirrorless full-frame equilibrada para foto y vídeo.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/61cpwJy9JsL._AC_SX679_-removebg-preview.png" alt="Fujifilm X-T4" />
-          <h2>Fujifilm X-T4</h2>
-          <p class="precio">1.349 €</p>
-          <p class="detalle">Colores únicos y estabilización en cuerpo.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/sony-alpha-6400-cuerpo-removebg-preview (1).png" alt="Sony Alpha 6400"/>
-          <h2>Sony Alpha 6400</h2>
-          <p class="precio">999 €</p>
-          <p class="detalle">Compacta y rápida para fotografía urbana.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        <article class="producto">
-          <img src="../../imagenes/4515C005_RF-50mm-F1-removebg-preview.png" alt="Canon RF 50mm f/1.8"/>
-          <h2>Canon RF 50mm f/1.8</h2>
-          <p class="precio">229 €</p>
-          <p class="detalle">Objetivo luminoso ideal para retrato.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/sel2470GM2.png" alt="Sony 24-70mm f/2.8"/>
-          <h2>Sony 24-70mm f/2.8</h2>
-          <p class="precio">1.899 €</p>
-          <p class="detalle">Zoom profesional todoterreno.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/a047_productimage-YdP2z8iX-removebg-preview.png" alt="Tamron 70-300mm" />
-          <h2>Tamron 70-300mm</h2>
-          <p class="precio">499 €</p>
-          <p class="detalle">Teleobjetivo ligero para naturaleza.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        <article class="producto">
-          <img src="../../imagenes/manfrotto_mkcompactlt_bk_compact_light_tripod_black_1648127138_1059024-removebg-preview.png" alt="Trípode Manfrotto" />
-          <h2>Trípode Manfrotto Compact</h2>
-          <p class="precio">129 €</p>
-          <p class="detalle">Estable y ligero para viajes.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/mochila_lowepro.png" alt="Mochila Lowepro" />
-          <h2>Mochila Lowepro ProTactic</h2>
-          <p class="precio">189 €</p>
-          <p class="detalle">Protección profesional para tu equipo.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/619mzoUVLML._AC_SX679_-removebg-preview.png" alt="Filtro ND" />
-          <h2>Filtro ND Variable</h2>
-          <p class="precio">79 €</p>
-          <p class="detalle">Control total de la exposición.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-        <article class="producto">
-          <img src="../../imagenes/tarjeta_sd.png" alt="Tarjeta SD 128GB" />
-          <h2>Tarjeta SD 128GB</h2>
-          <p class="precio">39 €</p>
-          <p class="detalle">Alta velocidad para fotografía y vídeo.</p>
-          <button>Añadir al carrito</button>
-        </article>
-        
-      </section>
-    </div>
+      <label for="buttonInputFiltro" class="filtro">
+        <img src="../../imagenes/filtro.png" class="filtroImg" alt="Filtro" />
+        <span>Filtrar</span>
+      </label>
 
-    <!-- -----------------FOOTER----------------- -->
+      <label for="buttonInputFiltro" class="overlay-filtro"></label>
+
+      <div class="modal-filtro">
+        <h3>Filtrar</h3>
+
+        <div class="filtro-grupo">
+          <p>Categoría</p>
+          <label><input type="checkbox" /> Cámaras</label>
+          <label><input type="checkbox" /> Objetivos</label>
+          <label><input type="checkbox" /> Accesorios</label>
+        </div>
+
+        <div class="filtro-grupo">
+          <p>Precio</p>
+          <label><input type="radio" name="precio" /> Menos de 200€</label>
+          <label><input type="radio" name="precio" /> 200€ - 1000€</label>
+          <label><input type="radio" name="precio" /> Más de 1000€</label>
+        </div>
+
+        <label for="buttonInputFiltro" class="cerrar-modal">Cerrar</label>
+      </div>
+
+      <!-- ------------------GRID PRODUCTOS------------------ -->
+    <section class="fila fila-mercado-grid">
+
+    <article class="producto">
+        <img src="../../imagenes/e8d4b0903356f8eb0d47231cef261217-removebg-preview.png" alt="Sony Alpha 7"/>
+        <h2>Sony Alpha 7</h2>
+        <p class="precio">1.199 €</p>
+        <p class="detalle">Full-frame ideal para estudio y paisaje.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/Canon_EOS_R-removebg-preview.png" alt="Canon EOS R"/>
+        <h2>Canon EOS R</h2>
+        <p class="precio">1.499 €</p>
+        <p class="detalle">Mirrorless con enfoque automático muy preciso.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/z6ii-front-removebg-preview.png" alt="Nikon Z6 II"/>
+        <h2>Nikon Z6 II</h2>
+        <p class="precio">1.699 €</p>
+        <p class="detalle">Equilibrada para foto profesional y vídeo.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+      <div class="oferta">Oferta</div>
+        <img src="../../imagenes/61cpwJy9JsL._AC_SX679_-removebg-preview.png" alt="Fujifilm X-T4"/>
+        <h2>Fujifilm X-T4</h2>
+        <p class="precio">1.349 €</p>
+        <p class="detalle">Color Fujifilm + estabilización en cuerpo.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/sony-alpha-6400-cuerpo-removebg-preview (1).png" alt="Sony Alpha 6400"/>
+        <h2>Sony Alpha 6400</h2>
+        <p class="precio">999 €</p>
+        <p class="detalle">Compacta y rápida para fotografía urbana.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/4515C005_RF-50mm-F1-removebg-preview.png" alt="Canon RF 50mm f/1.8"/>
+        <h2>Canon RF 50mm f/1.8</h2>
+        <p class="precio">229 €</p>
+        <p class="detalle">Objetivo luminoso perfecto para retrato.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/sel2470GM2.png" alt="Sony 24-70mm f/2.8"/>
+        <h2>Sony 24-70mm f/2.8</h2>
+        <p class="precio">1.899 €</p>
+        <p class="detalle">Zoom profesional todoterreno.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <div class="oferta">Oferta</div>
+        <img src="../../imagenes/a047_productimage-YdP2z8iX-removebg-preview.png" alt="Tamron 70-300mm"/>
+        <h2>Tamron 70-300mm</h2>
+        <p class="precio">499 €</p>
+        <p class="detalle">Teleobjetivo ligero para naturaleza.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/manfrotto_mkcompactlt_bk_compact_light_tripod_black_1648127138_1059024-removebg-preview.png" alt="Trípode Manfrotto"/>
+        <h2>Trípode Manfrotto Compact</h2>
+        <p class="precio">129 €</p>
+        <p class="detalle">Estable y ligero, ideal para viajes.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/lowepro-protactic-bp-350-aw-iii-removebg-preview.png" alt="Mochila Lowepro"/>
+        <h2>Mochila Lowepro ProTactic</h2>
+        <p class="precio">189 €</p>
+        <p class="detalle">Protección pro para todo tu equipo.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <div class="oferta">Oferta</div>
+        <img src="../../imagenes/619mzoUVLML._AC_SX679_-removebg-preview.png" alt="Filtro ND"/>
+        <h2>Filtro ND Variable</h2>
+        <p class="precio">79 €</p>
+        <p class="detalle">Control total de la luz y la exposición.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    <article class="producto">
+        <img src="../../imagenes/descarga.png" alt="Tarjeta SD 128GB"/>
+        <h2>Tarjeta SD 128GB</h2>
+        <p class="precio">20 €</p>
+        <p class="detalle">Alta velocidad para foto y vídeo 4K.</p>
+        <a class="boton-carrito" href="../../carrito/carrito.html">Añadir al carrito</a>
+    </article>
+
+    </section>
+    </main>
+
+    <!-- ------------------ FOOTER ------------------ -->
     <footer>
       <div class="fcontenido">
         <div class="finfo">
