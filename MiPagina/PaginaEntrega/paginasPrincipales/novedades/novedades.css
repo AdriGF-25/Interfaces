@@ -5,14 +5,13 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Montserrat',sans-serif;
 }
 
-
-/* -------------------- DIVISIONES -------------------- */
+/* --------------------DIVISIONES---------------------- */
 .divisiones {
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3,auto);
     object-fit: cover;
 }
 
@@ -22,102 +21,95 @@ body {
     align-items: center;
     overflow: hidden;
 }
+/* -----------------------fila 1------------------------ */
 
-
-/* -------------------- FILA 1 -------------------- */
-.fila:nth-child(1) {
+.fila:nth-child(1){
+    background-color: #030013;
     padding: 50px;
     z-index: -1;
-
-    background-color: #030013;
 }
-
 #imgInicio-div {
-    contain: layout; /* permite ver el texto aunque esté fuera */
+    width: 90%;          /* ancho del contenedor */
+    max-width: 1100px;   /* límite máximo */
+    margin: 0 auto;
+    position: relative;
+    contain: none;       /* permite que todo el contenido (imagen y texto) se vea */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* centra la imagen vertical y horizontalmente */
 }
 
-#imgInicio-div p,
-#imgInicio-div h2 {
+#imgInicio-div p ,#imgInicio-div h2 {
+    contain: none;
+    color: white;
     position: absolute;
     transform-origin: center;
     line-height: 1.5;
-    contain: none;
-
-    color: white;
 }
-
-#imgInicio-div .title {
+#imgInicio-div .title{
     bottom: 0;
     left: 50%;
-    transform: translate(20%, 30%);
+    transform: translate(20%,30%);
     font-size: large;
-    direction: rtl;
+    direction: rtl; /* esto es lo que hace que se escriba con el margen a la derecha */
 }
-
-#imgInicio-div .description {
+#imgInicio-div .description{
     bottom: 0;
-    left: 0;
+    left:0;
     transform: translateY(75%);
 }
-
-
-/* -------------------- FILA 2 -------------------- */
+/* -----------------------fila 2------------------------ */
 .fila:nth-child(2) {
-    padding: 40px;
-    background-color: #17029F;
+  background-color: #17029F;
+  padding: 40px;
 }
 
 .carousel-container {
-    position: relative;
-    margin: 0;
+  position: relative;
+  margin: 0;
 }
 
+/* Pista que se mueve en horizontal */
 .carousel-track {
-    display: flex;
-    gap: 20px;
-
-    animation: carouselInfinito 30s linear infinite;
-    transition: 0.3s ease;
+  display: flex;
+  gap: 20px;
+  animation: carouselInfinito 30s linear infinite;
+  transition: 0.3s ease;
 }
-
 .carousel-slide {
-    cursor: pointer;
-    transform: translateY(0) scale(1.1);
-    flex: 0 0 33.33%;
-
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  transform: translateY(0) scale(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  flex: 0 0 33.33%;
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: 90%;
-    object-fit: contain;
-    transform: scale(0.9);
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+  transform: scale(0.9);
 }
 
 .carousel-slide .description {
-    position: absolute;
-    bottom: 2.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-
-    color: white;
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
 }
 
-.carousel-slide .num {
-    position: absolute;
-    top: -10px;
-    left: 4.5%;
-    width: 100%;
-
-    color: white;
+.carousel-slide .num{
+  position: absolute;
+  top: -10px;
+  left: 4.5%;
+  width: 100%;
+  color: white;
 }
 
-
-/* -------------------- HOVERS -------------------- */
+/*------------------ hovers------------------*/
 .carousel-track:hover .carousel-slide {
     transform: translateY(10px) scale(0.9);
     opacity: 0.7;
@@ -129,80 +121,130 @@ body {
     z-index: 10;
 }
 
-
-/* -------------------- FILA 3 -------------------- */
-.fila:nth-child(3) {
+/* -----------------------fila 3------------------------ */
+.fila:nth-child(3){
     position: relative;
-    padding: 50px;
     background-color: #030013;
+    padding: 50px;
 }
 
+#imgInicio-div.fila3{
+    width: 88%; /* tamaño destacado ligeramente mayor */
+    max-width: 1050px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
 
-/* -------------------- ANIMACIONES -------------------- */
+/*----------------- animaciones ----------------- */
 .fila:nth-child(1) #imgInicio-div {
-    animation: entradaDestacado1 1.2s ease-out forwards;
+  animation: entradaDestacado1 1.2s ease-out forwards;
 }
 
 @keyframes entradaDestacado1 {
-    0% { opacity: 0; transform: translate(30px, 60px) scale(0.85) rotate(-12deg); }
-    60% { opacity: 1; transform: translate(-8px, -8px) scale(1.03) rotate(-3deg); }
-    100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  0% {
+      opacity: 0;
+      transform: translate(30px, 60px) scale(0.85) rotate(-12deg);
+  }
+  60% {
+      opacity: 1;
+      transform: translate(-8px, -8px) scale(1.03) rotate(-3deg);
+  }
+  100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+  }
 }
 
 .fila:nth-child(3) #imgInicio-div {
-    animation: entradaDestacado2 1.2s ease-out forwards;
-}
-
-@keyframes entradaDestacado2 {
-    0% { opacity: 0; transform: translate(-30px, -60px) scale(0.85) rotate(10deg); }
-    60% { opacity: 1; transform: translate(6px, 6px) scale(1.02) rotate(2deg); }
-    100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  animation: entradaDestacado2 1.2s ease-out 0.8s forwards;
 }
 
 @keyframes carouselInfinito {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-
-/* -------------------- RESPONSIVE -------------------- */
-@media (max-width: 1400px) {
-    .carousel-slide { flex: 0 0 40%; }
-}
-
-@media (max-width: 900px) {
-    .fila { padding: 40px 20px; }
-
-    #imgInicio-div { aspect-ratio: 16/10; }
+/*----------------- RESPONSIVE -----------------*/
+@media (max-width: 1000px) {
+    .fila {
+        padding: 40px 20px;
+    }
 
     #imgInicio-div .title,
-    #imgInicio-div .description { 
+    #imgInicio-div .description {
         max-width: 80%;
         left: 20px;
         right: 20px;
     }
 
-    .carousel-slide { flex: 0 0 50%; }
+    .carousel-slide {
+        flex: 0 0 45%;
+    }
 
-    .carousel-slide img { height: 220px; }
+    .carousel-slide img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 750px) {
+    .fila {
+        padding: 35px 15px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 60%;
+    }
+
+    .carousel-slide img {
+        height: 150px;
+    }
+
+    .carousel-slide .description {
+        font-size: 0.9rem;
+        padding: 4px 6px;
+    }
 }
 
 @media (max-width: 480px) {
-    .fila { padding: 30px 15px; }
+    .fila {
+        padding: 30px 15px;
+    }
 
     #imgInicio-div {
         border-radius: 18px;
         box-shadow: 0 18px 50px rgba(0,0,0,0.7);
     }
 
-    #imgInicio-div .title { bottom: 20px; padding: 14px; }
-    #imgInicio-div .description { bottom: auto; top: 20px; font-size: 0.95rem; padding: 12px; }
+    #imgInicio-div .title {
+        bottom: 20px;
+        padding: 14px;
+    }
 
-    .carousel-container { border-radius: 20px; }
+    #imgInicio-div .description {
+        bottom: auto;
+        top: 20px;
+        font-size: 0.95rem;
+        padding: 12px;
+    }
 
-    .carousel-slide { flex: 0 0 70%; }
+    .carousel-container {
+        border-radius: 20px;
+    }
 
-    .carousel-slide img { height: 200px; }
+    .carousel-slide {
+        flex: 0 0 70%;
+    }
 
-    .carousel-slide .description { font-size: 0.9rem; padding: 6px 12px; }
+    .carousel-slide img {
+        height: 120px;
+    }
+
+    .carousel-slide .description {
+        font-size: 0.8rem;
+        padding: 3px 5px;
+    }
 }
