@@ -6,27 +6,31 @@
 
 body {
   font-family: Montserrat, sans-serif;
+
   background-color: #030013;
   color: white;
 }
 
+
+/* -------------------- MENÚ -------------------- */
 ul.menu li > a.activo {
   background-color: #F6D1D6;
   color: black;
 }
 
-/* --------------------MAIN CARRITO--------------------- */
-/* BASE = MÓVIL (0px a 479px) */
+
+/* -------------------- CARRITO -------------------- */
 .carrito {
   display: grid;
   grid-template-rows: auto auto;
   gap: 22px;
   padding: 120px 15px 25px;
-  
+
   animation: fadeIn 0.7s ease forwards;
 }
 
-/* ------------- Animación -------------*/
+
+/* -------------------- ANIMACIÓN -------------------- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -38,21 +42,12 @@ ul.menu li > a.activo {
   }
 }
 
-/* --------------------FILA 1--------------------- */
+
+/* -------------------- FILA CARRITO TITULO -------------------- */
 .fila-carrito-titulo {
   text-align: center;
-  animation: slideUp 0.7s ease forwards;
-}
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: slideUp 0.7s ease forwards;
 }
 
 .fila-carrito-titulo h1 {
@@ -67,13 +62,26 @@ ul.menu li > a.activo {
   font-size: 0.95rem;
 }
 
-/* --------------------FILA 2 (TABLA)--------------------- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* -------------------- FILA CARRITO TABLA -------------------- */
 .fila-carrito-tabla {
+  display: grid;
+  gap: 15px;
+
   background: linear-gradient(180deg, #17029f 0%, #0f0075 100%);
   border-radius: 22px;
   padding: 16px;
-  display: grid;
-  gap: 15px;
 
   box-shadow: 0 0 30px rgba(23, 2, 159, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -81,13 +89,14 @@ ul.menu li > a.activo {
   animation: fadeIn 0.8s ease forwards;
 }
 
-/* --------------------CABECERA--------------------- */
-/* En móvil la ocultamos */
+
+/* -------------------- CABECERA -------------------- */
 .cabecera {
   display: none;
 }
 
-/* --------------------LINEA PRODUCTO--------------------- */
+
+/* -------------------- LINEA PRODUCTO -------------------- */
 .linea-producto {
   display: grid;
   grid-template-columns: 1fr;
@@ -108,7 +117,8 @@ ul.menu li > a.activo {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
-/* --------------------INFO PRODUCTO--------------------- */
+
+/* -------------------- PRODUCTO INFO -------------------- */
 .producto-info {
   display: flex;
   gap: 12px;
@@ -135,7 +145,8 @@ ul.menu li > a.activo {
   margin-top: 4px;
 }
 
-/* --------------------INPUT CANTIDAD--------------------- */
+
+/* -------------------- INPUT CANTIDAD -------------------- */
 .linea-producto input[type="number"] {
   width: 100%;
   padding: 7px 8px;
@@ -146,6 +157,7 @@ ul.menu li > a.activo {
   font-family: inherit;
   font-size: 0.95rem;
   outline: none;
+
   transition: border 0.25s ease, background 0.25s ease;
 }
 
@@ -154,7 +166,8 @@ ul.menu li > a.activo {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-/* --------------------PRECIOS--------------------- */
+
+/* -------------------- PRECIOS -------------------- */
 .linea-producto span {
   font-size: 0.95rem;
   opacity: 0.95;
@@ -172,14 +185,16 @@ ul.menu li > a.activo {
   margin-right: 6px;
 }
 
-/* --------------------RESUMEN--------------------- */
+
+/* -------------------- RESUMEN -------------------- */
 .resumen {
   margin-top: 10px;
+  display: grid;
+  gap: 10px;
+
   background-color: rgba(3, 0, 19, 0.75);
   border-radius: 14px;
   padding: 16px;
-  display: grid;
-  gap: 10px;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -199,7 +214,6 @@ ul.menu li > a.activo {
   margin-top: 4px;
 }
 
-/* --------------------BOTÓN CHECKOUT--------------------- */
 .resumen button {
   margin-top: 10px;
   padding: 12px 18px;
@@ -226,7 +240,8 @@ ul.menu li > a.activo {
   transform: translateY(0);
 }
 
-/* --------------------CUPÓN--------------------- */
+
+/* -------------------- FILA CUPÓN -------------------- */
 .fila-cupon {
   display: flex;
   flex-direction: column;
@@ -244,6 +259,7 @@ ul.menu li > a.activo {
   font-family: inherit;
   font-size: 0.95rem;
   outline: none;
+
   transition: border 0.25s ease, background 0.25s ease;
 }
 
@@ -260,8 +276,9 @@ ul.menu li > a.activo {
   color: black;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.25s ease;
   width: 100%;
+
+  transition: transform 0.25s ease;
 }
 
 .fila-cupon button:hover {
@@ -270,7 +287,8 @@ ul.menu li > a.activo {
   color: black;
 }
 
-/* --------------------SEPARADOR OR--------------------- */
+
+/* -------------------- OR SEPARADOR -------------------- */
 .or-separador {
   display: flex;
   align-items: center;
@@ -292,7 +310,8 @@ ul.menu li > a.activo {
   white-space: nowrap;
 }
 
-/* --------------------SEGUIR COMPRANDO--------------------- */
+
+/* -------------------- SEGUIR COMPRANDO -------------------- */
 .seguir-comprando {
   text-align: center;
   margin-bottom: 10px;
@@ -306,6 +325,7 @@ ul.menu li > a.activo {
   color: white;
   font-weight: 600;
   text-decoration: none;
+
   transition: 0.25s ease;
 }
 
@@ -315,11 +335,9 @@ ul.menu li > a.activo {
   transform: translateY(-2px);
 }
 
-/* ===================================================== */
-/* ================== BREAKPOINTS ====================== */
-/* ===================================================== */
 
-/* -------------------- ≥ 480px --------------------- */
+/* -------------------- BREAKPOINTS -------------------- */
+
 @media (min-width: 480px) {
   .carrito {
     padding: 120px 20px 30px;
@@ -355,7 +373,6 @@ ul.menu li > a.activo {
     font-size: 0.95rem;
   }
 
-  /* Cupón ya puede ir en fila */
   .fila-cupon {
     flex-direction: row;
   }
@@ -369,13 +386,11 @@ ul.menu li > a.activo {
   }
 }
 
-/* -------------------- ≥ 750px --------------------- */
 @media (min-width: 750px) {
   .carrito {
     padding: 130px 20px 30px;
   }
 
-  /* vuelve la cabecera */
   .cabecera {
     display: grid;
     grid-template-columns: 2fr 0.8fr 1fr 1fr;
@@ -395,10 +410,8 @@ ul.menu li > a.activo {
     padding: 14px 12px;
   }
 
-  /* Quitamos los textos "Precio:" y "Total:" */
   .linea-producto span:nth-of-type(1)::before,
   .linea-producto span:nth-of-type(2)::before {
-    content: "";
     margin-right: 0;
   }
 
@@ -416,7 +429,6 @@ ul.menu li > a.activo {
   }
 }
 
-/* -------------------- ≥ 1000px --------------------- */
 @media (min-width: 1000px) {
   .carrito {
     padding: 140px 40px 40px;

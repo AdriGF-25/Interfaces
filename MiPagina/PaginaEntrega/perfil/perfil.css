@@ -4,39 +4,30 @@
   box-sizing: border-box;
 }
 
-/* Sticky footer bien hecho */
 html, body {
   height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Montserrat, sans-serif;
   background-color: #030013;
   color: white;
-
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-/*====================================
-=                MAIN                =
-====================================*/
-/* BASE = MÓVIL (0px - 479px) */
+/* -------------------- PERFIL -------------------- */
 .perfil {
-  flex: 1;
-
   display: grid;
   grid-template-rows: auto;
+  flex: 1;
   padding: 110px 15px 30px;
-
   opacity: 0;
   animation: fadeIn 0.7s ease forwards;
 }
 
-/*====================================
-=        GRID GENERAL PERFIL         =
-====================================*/
+/* -------------------- GRID GENERAL -------------------- */
 .perfil-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -48,29 +39,22 @@ body {
   gap: 25px;
 }
 
-/*====================================
-=        FILA PERFIL FORM            =
-====================================*/
+/* -------------------- FILA PERFIL FORM -------------------- */
 .fila-perfil-form {
-  background-color: #17029f;
-  border-radius: 16px;
-  padding: 18px;
-
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-
+  padding: 18px;
+  background-color: #17029f;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   opacity: 0;
   transform: translateY(16px);
   animation: slideUp 0.75s ease forwards;
   animation-delay: 0.1s;
 }
 
-/*====================================
-=             FORMULARIO             =
-====================================*/
+/* -------------------- FORMULARIO -------------------- */
 .formulario {
   display: grid;
   gap: 10px;
@@ -92,43 +76,36 @@ body {
   padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid transparent;
-
-  outline: none;
-  font-family: inherit;
-
-  background-color: rgba(3, 0, 19, 0.55);
+  background-color: rgba(3,0,19,0.55);
   color: white;
-
+  font-family: inherit;
+  outline: none;
   transition: 0.25s ease;
 }
 
 .formulario input:hover,
 .formulario select:hover {
-  background-color: rgba(3, 0, 19, 0.75);
+  background-color: rgba(3,0,19,0.75);
 }
 
 .formulario input:focus,
 .formulario select:focus {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
 }
 
-/* Botón formulario */
 .formulario button {
+  width: 100%;
   margin-top: 12px;
   padding: 12px 16px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
-
   background-color: black;
   color: white;
-
   font-weight: 600;
   font-family: inherit;
-
   transition: 0.25s ease;
-  width: 100%;
 }
 
 .formulario button:hover {
@@ -141,16 +118,13 @@ body {
   transform: translateY(0px);
 }
 
-/*====================================
-=           PERFIL FOTO              =
-====================================*/
+/* -------------------- PERFIL FOTO -------------------- */
 .perfil-foto {
   display: grid;
-  gap: 15px;
   justify-items: center;
   align-content: center;
+  gap: 15px;
   color: white;
-
   opacity: 0;
   transform: translateX(20px);
   animation: slideInRight 0.75s ease forwards;
@@ -158,14 +132,13 @@ body {
 }
 
 .perfil-foto img {
+  display: block;
   width: 175px;
   height: 175px;
   object-fit: cover;
   border-radius: 16px;
   background-color: white;
-
-  border: 2px solid rgba(0, 0, 0, 0.55);
-
+  border: 2px solid rgba(0,0,0,0.55);
   transition: 0.25s ease;
 }
 
@@ -176,75 +149,61 @@ body {
 
 .perfil-foto p {
   text-align: center;
-  opacity: 0.9;
   font-size: 0.95rem;
+  opacity: 0.9;
   max-width: 320px;
 }
 
-/* Botón personalizar */
 .btn-personalizar {
-  text-decoration: none;
-  padding: 12px 18px;
-  border-radius: 20px;
-
-  background: rgba(3, 0, 19, 0.7);
-  color: white;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  font-weight: 600;
-  font-size: 0.95rem;
-
-  transition: 0.25s ease;
   width: 100%;
   text-align: center;
+  padding: 12px 18px;
+  border-radius: 20px;
+  background: rgba(3,0,19,0.7);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.25s ease;
 }
 
 .btn-personalizar:hover {
   transform: translateY(-2px);
-  background: rgba(3, 0, 19, 0.9);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(3,0,19,0.9);
+  border-color: rgba(255,255,255,0.35);
 }
 
 .btn-personalizar:active {
   transform: translateY(0px);
 }
 
-/*====================================
-=        PANEL LATERAL USUARIO        =
-====================================*/
+/* -------------------- PANEL LATERAL -------------------- */
 .perfil-lateral {
+  display: grid;
+  gap: 20px;
+  order: -1;
   background: rgba(255,255,255,0.05);
   border-radius: 16px;
   padding: 20px;
   height: fit-content;
-
-  display: grid;
-  gap: 20px;
-
   animation: slideInRight 0.8s ease forwards;
-
-  /* En móvil va arriba */
-  order: -1;
 }
 
-/* Usuario */
 .usuario-box {
-  text-align: center;
   display: grid;
+  text-align: center;
   gap: 8px;
 }
 
 .avatar {
+  display: grid;
+  place-items: center;
   width: 60px;
   height: 60px;
   background: #c7a600;
   color: black;
   border-radius: 12px;
-
-  display: grid;
-  place-items: center;
-
   font-weight: 700;
   font-size: 1.4rem;
   margin: 0 auto;
@@ -266,20 +225,18 @@ body {
   opacity: 1;
 }
 
-/* Links laterales */
 .usuario-links {
   display: grid;
   gap: 12px;
 }
 
 .usuario-links a {
-  background: rgba(0,0,0,0.4);
   padding: 12px 15px;
   border-radius: 12px;
   text-decoration: none;
-  color: white;
   font-size: 0.9rem;
-
+  background: rgba(0,0,0,0.4);
+  color: white;
   transition: 0.25s ease;
 }
 
@@ -287,13 +244,11 @@ body {
   background: rgba(0,0,0,0.7);
 }
 
-/*====================================
-=         RESUMENES DE VENTA          =
-====================================*/
+/* -------------------- RESUMENES -------------------- */
 .perfil-resumenes {
-  margin-top: 10px;
   display: grid;
   gap: 18px;
+  margin-top: 10px;
 }
 
 .perfil-resumenes h3 {
@@ -303,13 +258,11 @@ body {
 .resumen-card {
   display: grid;
   grid-template-columns: 90px 1fr;
+  align-items: center;
   gap: 15px;
-
+  padding: 15px;
   background: rgba(255,255,255,0.05);
   border-radius: 16px;
-  padding: 15px;
-
-  align-items: center;
   transition: 0.25s ease;
 }
 
@@ -322,8 +275,9 @@ body {
   width: 100%;
   border-radius: 12px;
 }
+
 .resumen-card img:nth-child(1) {
-  transform: scale(1.15) !important;
+  transform: scale(1.15);
 }
 
 .resumen-card p {
@@ -341,114 +295,98 @@ body {
   font-size: 0.85rem;
 }
 
-/*====================================
-=            ANIMACIONES             =
-====================================*/
+/* -------------------- ANIMACIONES -------------------- */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
-/* ===================================================== */
-/* ================== BREAKPOINTS ====================== */
-/* ===================================================== */
-
-/* -------------------- ≥ 480px --------------------- */
+/* -------------------- RESPONSIVE -------------------- */
 @media (min-width: 480px) {
-  .perfil {
-    padding: 115px 20px 35px;
-  }
-
-  .fila-perfil-form {
-    padding: 22px;
-    border-radius: 18px;
-    gap: 22px;
-  }
-
-  .formulario h2 {
-    font-size: 1.45rem;
-  }
-
-  .perfil-foto img {
-    width: 200px;
-    height: 200px;
-    border-radius: 18px;
-  }
-
-  .formulario button,
-  .btn-personalizar {
-    width: auto;
-  }
+    .perfil {
+        padding: 115px 20px 35px;
+    }
+    .fila-perfil-form {
+        padding: 22px;
+        border-radius: 18px;
+        gap: 22px;
+    }
+    .formulario h2 {
+        font-size: 1.45rem;
+    }
+    .perfil-foto img {
+        width: 200px;
+        height: 200px;
+    }
+    .formulario button,
+    .btn-personalizar {
+        width: auto;
+    }
 }
 
-/* -------------------- ≥ 750px --------------------- */
 @media (min-width: 750px) {
-  .perfil {
-    padding: 125px 25px 40px;
-  }
-
-  .perfil-lateral {
-    order: 0;
-  }
-
-  .perfil-foto img {
-    width: 220px;
-    height: 220px;
-  }
+    .perfil {
+        padding: 125px 25px 40px;
+    }
+    .perfil-lateral {
+        order: 0;
+    }
+    .perfil-foto img {
+        width: 220px;
+        height: 220px;
+    }
 }
 
-/* -------------------- ≥ 1000px --------------------- */
 @media (min-width: 1000px) {
-  .perfil {
-    padding: 40px 40px 40px;
-  }
-
-  .perfil-grid {
-    grid-template-columns: 3fr 1fr;
-    gap: 30px;
-  }
-
-  .fila-perfil-form {
-    grid-template-columns: 2fr 1.2fr;
-    gap: 30px;
-    padding: 30px;
-    border-radius: 20px;
-  }
-
-  .perfil-lateral {
-    padding: 25px;
-    border-radius: 20px;
-  }
-
-  .perfil-foto img {
-    width: 240px;
-    height: 240px;
-    border-radius: 20px;
-  }
-
-  .formulario h2 {
-    font-size: 1.6rem;
-  }
+    .perfil {
+        padding: 40px 40px 40px;
+    }
+    .perfil-grid {
+        grid-template-columns: 3fr 1fr;
+        gap: 30px;
+    }
+    .fila-perfil-form {
+        grid-template-columns: 2fr 1.2fr;
+        gap: 30px;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .perfil-lateral {
+        padding: 25px;
+        border-radius: 20px;
+    }
+    .perfil-foto img {
+        width: 240px;
+        height: 240px;
+        border-radius: 20px;
+    }
+    .formulario h2 {
+        font-size: 1.6rem;
+    }
 }
