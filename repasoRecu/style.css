@@ -20,6 +20,7 @@ body{
     display: flex;
     align-items: center;
 }
+
 /* login */
 .login {
     display: flex;
@@ -95,6 +96,7 @@ body{
 }
 
 /* ------------------- footer -------------------- */
+
 #footer{
     display: flex;
     background-color: #3E405B;
@@ -111,6 +113,7 @@ body{
 #footer .politicas{
     margin-left: auto;
 }
+
 /* ------------------- animaciones -------------------- */
 
 @keyframes idleLogo {
@@ -161,6 +164,7 @@ body{
 }
 
 /* ------------------- hovers -------------------- */
+
 #menu a:not(.activo):hover{
     color: #E17A60;
 }
@@ -189,52 +193,3 @@ body{
 
 /* ------------------- RESPONSIVE -------------------- */
 
-@media (min-width:700px) and (max-width:899px){
-    #nav-wrapper{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    #menu{
-        margin-left: 0;
-    }
-    #main{
-        grid-template-columns: repeat(3,1fr);
-    }
-    #footer .redes, #footer .politicas{
-        flex-direction: column;
-    }
-}
-@media (min-width:480px) and (max-width:699px){
-    /* #nav-wrapper */
-    #nav-wrapper{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    #menu{
-        margin-left: 0;
-    }
-    #main{
-        grid-template-columns: repeat(2,1fr);
-    }
-    #footer .redes, #footer .politicas{
-        flex-direction: column;
-    }
-}
-@media (max-width:479px) {
-    #nav-wrapper{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    #menu{
-        margin-left: 0;
-    }
-    #main{
-        grid-template-columns: repeat(1,1fr);
-    }
-    #footer .redes, #footer .politicas{
-        flex-direction: column;
-    }
-}
